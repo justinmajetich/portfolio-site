@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Header from 'components/templates/Header'
-import Landing from 'components/layouts/Landing'
-import Section from 'components/layouts/Section'
+import Section from 'components/layouts/SectionLayout'
 
 export default function Home() {
   return (
