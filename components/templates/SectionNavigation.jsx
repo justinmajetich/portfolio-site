@@ -1,5 +1,6 @@
-import Button from 'components/elements/Button'
 import styled from 'styled-components'
+import Link from 'next/link'
+import SectionButton from 'components/elements/SectionButton'
 
 const StyledContainer = styled.div`
     display: flex;
@@ -15,9 +16,13 @@ const StyledContainer = styled.div`
 export default function SectionNavigation(props) {
     return (
         <StyledContainer>
-            <Button text={'Code'}/>
-            <Button text={'Art Dept'}/>
-            <Button text={'Music'}/>
+            <Link
+                href='/code'
+            >
+                <SectionButton text={'Code'}/>
+            </Link>
+            <SectionButton text={'Art Dept'}/>
+            <SectionButton text={'Music'}/>
         </StyledContainer>
     )
 }
