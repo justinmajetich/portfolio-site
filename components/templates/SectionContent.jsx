@@ -11,7 +11,7 @@ export default function SectionContent(props) {
             <SectionHeader sectionTitle={props.sectionTitle}/>
             {ParseTextToParagraphs(props.sectionDescription, StyledParagraph)}
             {/* <h2>Projects</ h2> */}
-            <ProjectsFilter fitlerTags={['web', 'xr', 'mobile', 'low-level']} />
+            <ProjectsFilter fitlerTags={['web', 'xr', 'mobile']} />
             <ProjectGallery />
         </ContentContainer>
     )
