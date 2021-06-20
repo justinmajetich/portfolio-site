@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled, { keyframes } from 'styled-components'
 
 const fadeIn = keyframes`
@@ -61,11 +62,13 @@ animation: ${fadeIn} .2s 1;
 
 export default function ProjectCardOverlay(props) {
     return (
-        <StyledHoverOverlay>
-            <StyledOverlayBackground />
-            <StyledCardHeader>{props.name}</StyledCardHeader>
-            {/* <StyledDate>2021</StyledDate> */}
-            <StyledArrow>{'->'}</StyledArrow>
-        </StyledHoverOverlay>
+        <Link href={'[sectionID]/' + props.name}>
+            <StyledHoverOverlay>
+                <StyledOverlayBackground />
+                <StyledCardHeader>{props.name}</StyledCardHeader>
+                {/* <StyledDate>2021</StyledDate> */}
+                <StyledArrow>{'->'}</StyledArrow>
+            </StyledHoverOverlay>
+        </Link>
     )
 }
