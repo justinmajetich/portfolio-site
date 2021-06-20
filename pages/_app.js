@@ -13,7 +13,12 @@ const GlobalStyle = createGlobalStyle`
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
+  h1 {
+    margin: 20px 0;
+  }
+
   p {
+    font-size: 0.9em;
     line-height: 140%;
   }
 
