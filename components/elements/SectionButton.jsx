@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled, { keyframes } from 'styled-components'
 
 const StyledButtonContainer = styled.div`
@@ -9,7 +10,7 @@ const StyledButtonContainer = styled.div`
     margin: 20px;
 `
 
-export const StyledButtonBackground = styled.div`
+const StyledButtonBackground = styled.div`
     width: 100%;
     height: 75px;
 
@@ -19,7 +20,7 @@ export const StyledButtonBackground = styled.div`
     background: lightgray;
 `
 
-export const StyledButton = styled.button`
+const StyledButton = styled.button`
     position: absolute;
     top: -8px;
     left: -8px;
@@ -34,23 +35,17 @@ export const StyledButton = styled.button`
     cursor: pointer;
 
     transition: top .05s, left .05s;
-
-    /* :hover {
-        top: -2px;
-        left: -2px;
-    }
-
-    :active {
-        top: 0px;
-        left: 0px;
-    } */
 `
 
 export default function Button(props) {
     return (
-        <StyledButtonContainer>
-            <StyledButtonBackground/>
-            <StyledButton>{props.text ? props.text : 'Button'}</StyledButton>
-        </StyledButtonContainer>
+        <Link href={props.sectionID}>
+            <StyledButtonContainer>
+                <StyledButtonBackground/>
+                <StyledButton>
+                    {props.name ? props.name : 'Button'}
+                </StyledButton>
+            </StyledButtonContainer>
+        </Link>
     )
 }
