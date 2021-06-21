@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 import SectionButton from 'components/elements/SectionButton'
 
 const StyledContainer = styled.div`
@@ -16,13 +15,18 @@ const StyledContainer = styled.div`
 export default function SectionNavigation(props) {
     return (
         <StyledContainer>
-            <Link
-                href='/code'
-            >
-                <SectionButton text={'Code'}/>
-            </Link>
-            <SectionButton text={'Art Dept'}/>
-            <SectionButton text={'Music'}/>
+            <SectionButton
+                name={'Code'}
+                sectionID={'code'}
+            />
+            <SectionButton
+                name={'Art Dept'}
+                sectionID={'art-dept'}
+            />
+            <SectionButton
+                name={'Music'}
+                sectionID={'music'}    
+            />
         </StyledContainer>
     )
 }
