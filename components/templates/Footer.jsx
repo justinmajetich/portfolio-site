@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
     width: 100%;
     height: 25px;
 
-    margin-top: 40px;
+    margin-top: 25px;
 `
 
 const StyledCopyright = styled.p`
