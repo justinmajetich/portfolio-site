@@ -1,14 +1,13 @@
 import ContentContainer from 'components/elements/ContentContainer'
-import SectionHeader from 'components/elements/SectionHeader'
 import StyledParagraph from 'components/elements/StyledParagraph'
 import ProjectsFilter from 'components/modules/ProjectsFilter'
 import ParseTextToParagraphs from 'utils/ParseTextToParagraphs'
-import ProjectGallery from './ProjectGallery'
+import ProjectGallery from 'components/modules/ProjectGallery'
 
-export default function SectionContent(props) {
+export default function CategoryContent(props) {
     return (
         <ContentContainer>
-            <SectionHeader sectionTitle={props.sectionTitle}/>
+            <h1>{props.sectionTitle}</h1>
             {ParseTextToParagraphs(props.sectionDescription, StyledParagraph)}
             {/* <h2>Projects</ h2> */}
             <ProjectsFilter fitlerTags={['web', 'xr', 'mobile']} />

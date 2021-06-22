@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import SectionLayout from 'components/layouts/SectionLayout'
+import CategoryLayout from 'components/layouts/CategoryLayout'
 
-export default function Section() {
+export default function Category() {
   return (
     <>
       <Head>
@@ -9,7 +9,7 @@ export default function Section() {
         <meta name="description" content="Justin Majetich's portfolio site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SectionLayout />
+      <CategoryLayout />
     </>
   )
 }
