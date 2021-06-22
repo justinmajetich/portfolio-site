@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import ContentContainer from "components/elements/ContentContainer";
 import ProjectCoverImage from "components/elements/ProjectCoverImage";
 import ProjectDescription from "components/modules/ProjectDescription";
-import ImageGallery from 'components/modules/ImageGallery';
+import MediaGallery from 'components/modules/MediaGallery';
 
 const StyledContainer = styled.div`
     /* This margin conpensates for the banner.
@@ -18,7 +18,7 @@ export default function ProjectContent(props) {
             <ContentContainer>
                 <ProjectDescription />
                 <h1>Gallery</h1>
-                <ImageGallery 
+                <MediaGallery 
                     images={[
                         {src: '/images/vr-wheelchair.jpg', description: 'VR Wheelchair Logo'},
                         {src: '/images/resume.png', description: 'Resume'},
