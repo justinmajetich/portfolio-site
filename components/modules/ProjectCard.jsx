@@ -6,8 +6,9 @@ import ProjectCardOverlay from 'components/elements/ProjectCardOverlay'
 
 const StyledWrapper = styled.div`
     overflow: hidden;
-
     position: relative;
+    width: 300px;
+    height: 300px;
     margin: 20px 0;
     line-height: 0;
 
@@ -34,8 +35,8 @@ export default function ProjectCard({ project }) {
             <Image
                 src={'http://localhost:1337' + project.cover.formats.medium.url}
                 alt={project.cover.alternativeText}
-                width={project.cover.formats.medium.width}
-                height={project.cover.formats.medium.height}
+                layout={'fill'}
+                objectFit={'cover'}
             />
             {isHovered ? <ProjectCardOverlay title={project.title}/> : null}
         </StyledWrapper>
