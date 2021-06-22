@@ -14,7 +14,7 @@ const StyledWrapper = styled.div`
     cursor: pointer;
 `
 
-export default function ProjectCard(props) {
+export default function ProjectCard({ project }) {
 
     const [isHovered, setIsHovered] = useState(false)
 
@@ -32,12 +32,12 @@ export default function ProjectCard(props) {
             onMouseLeave={handleMouseLeave}
         >
             <Image
-                src={props.imageSrc}
-                alt={props.name}
-                width={300}
-                height={300}
+                src={'http://localhost:1337' + project.cover.formats.medium.url}
+                alt={project.cover.alternativeText}
+                width={project.cover.formats.medium.width}
+                height={project.cover.formats.medium.height}
             />
-            {isHovered ? <ProjectCardOverlay name={props.name}/> : null}
+            {isHovered ? <ProjectCardOverlay title={project.title}/> : null}
         </StyledWrapper>
     )
 }

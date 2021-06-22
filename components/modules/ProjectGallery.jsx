@@ -11,33 +11,17 @@ const StyledContainer = styled.div`
     margin-bottom: 40px;
 `
 
-export default function ProjectGallery(props) {
+export default function ProjectGallery({ projects }) {
     return (
         <StyledContainer>
-            <ProjectCard
-                imageSrc={'/images/cards/vr-wheelchair-sq-300px.png'}
-                name={'VR Wheelchair'}
-            />
-            <ProjectCard
-                imageSrc={'/images/cards/heaven-sq-300px.png'}
-                name={'As I Once Transformed Myself for You, So I Must Now Transform Myself for Heaven'}
-            />
-            <ProjectCard
-                imageSrc={'/images/cards/vr-wheelchair-sq-300px.png'}
-                name={'REST for the Wicked'}
-            />
-            <ProjectCard
-                imageSrc={'/images/vr-wheelchair.jpg'}
-                name={'As I Once Transformed Myself for You, So I Must Now Transform Myself for Heaven'}
-            />
-            <ProjectCard
-                imageSrc={'/images/rest-for-the-wicked.png'}
-                name={'VR Wheelchair'}
-            />
-            <ProjectCard
-                imageSrc={'/images/cards/heaven-sq-300px.png'}
-                name={'As I Once Transformed Myself for You, So I Must Now Transform Myself for Heaven'}
-            />
+            {projects.map( project => {
+                return (
+                    <ProjectCard
+                        key={project.id}
+                        project={project}
+                    />
+                )}
+            )}
         </StyledContainer>
     )
 }

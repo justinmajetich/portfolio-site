@@ -11,7 +11,7 @@ const StyledTagsContainer = styled.div`
 export default function ProjectsFilter(props) {
     return (
         <StyledTagsContainer>
-            {props.fitlerTags.map((tag, i) => <FilterTag key={i}>{tag}</FilterTag>)}
+            {props.fitlerTags.map((tag, i) => <FilterTag key={i}>{tag.name}</FilterTag>)}
         </StyledTagsContainer>   
     )
 }

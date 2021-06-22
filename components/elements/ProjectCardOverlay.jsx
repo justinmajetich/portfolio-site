@@ -62,11 +62,10 @@ animation: ${fadeIn} .2s 1;
 
 export default function ProjectCardOverlay(props) {
     return (
-        <Link href={'[sectionID]/' + props.name}>
+        <Link href={'[sectionID]/' + props.title}>
             <StyledHoverOverlay>
                 <StyledOverlayBackground />
-                <StyledCardHeader>{props.name}</StyledCardHeader>
-                {/* <StyledDate>2021</StyledDate> */}
+                <StyledCardHeader>{props.title}</StyledCardHeader>
                 <StyledArrow>{'->'}</StyledArrow>
             </StyledHoverOverlay>
         </Link>
