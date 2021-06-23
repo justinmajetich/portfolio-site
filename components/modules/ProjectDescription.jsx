@@ -18,23 +18,30 @@ const StyledLinksWrapper = styled.div`
 export default function ProjectDescription(props) {
     return (
         <div>
-            <StyledProjectTitle>Project Title</StyledProjectTitle>
+            <StyledProjectTitle>{props.title}</StyledProjectTitle>
             <StyledParagraph>
-                {'VR Wheelchair is a wheelchair locomotion system for virtual reality applications made with Unity. The package contains a complete player controller rig which can be easily imported as a prefab into an existing project. The controller is layered closely on top of Unity\'s XR Interaction Toolkit to provide cross-platform compatibility.'}
+                {props.summary}
             </StyledParagraph>
             <StyledDetailsWrapper>
-                <ProjectDetail
-                    title={'Role'}
-                    content={'Developer'}
-                />
-                <ProjectDetail
-                    title={'Tools'}
-                    content={'C#, Unity'}
-                />
+                {props.details.map(detail => {
+                    return (
+                        <ProjectDetail
+                            key={detail.id}
+                            title={detail.title}
+                            description={detail.description}
+                        />
+                    )
+                })}
             </StyledDetailsWrapper>
             <StyledLinksWrapper>
-                <ProjectLink />
-                <ProjectLink />
+                {props.links.map(link => {
+                    return (
+                        <ProjectLink
+                            key={link.id}
+                            title={link.title}
+                        />
+                    )
+                })}
             </StyledLinksWrapper>
         </div>
     )

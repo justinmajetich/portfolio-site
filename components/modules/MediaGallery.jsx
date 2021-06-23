@@ -19,15 +19,15 @@ const StyledImageWrapper = styled.div`
     margin: 20px;
 `
 
-export default function ImageGallery(props) {
+export default function MediaGallery({ media }) {
     return (
         <StyledContainer>
-            {props.images.map( (image, i) => {
+            {media.map( media => {
                 return (
-                    <StyledImageWrapper key={i}>
+                    <StyledImageWrapper key={media.id}>
                         <Image
-                            src={image.src}
-                            alt={image.description ? image.description : 'Image'}
+                            src={'http://localhost:1337' + media.url}
+                            alt={media.alternativeText}
                             layout={'fill'}
                             objectFit={'contain'}
                             objectPosition={'50% 50%'}

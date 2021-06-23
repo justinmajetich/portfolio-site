@@ -26,7 +26,7 @@ export default function ProjectLink(props) {
                     width={14}
                     height={14}
                 />
-                <StyledLinkDescription>Link Description</StyledLinkDescription>
+                <StyledLinkDescription>{props.title}</StyledLinkDescription>
             </StyledContainer>
         </Link>
     )

@@ -16,8 +16,8 @@ export default function ProjectBanner(props) {
     return (
         <StyledBannerWrapper>
             <Image
-                src={'/images/vr-wheelchair.jpg'}
-                alt={'VR Wheelchair'}
+                src={'http://localhost:1337' + props.coverImage.url}
+                alt={props.coverImage.alternativeText}
                 layout={'fill'}
                 objectFit={'cover'}
                 objectPosition={'center center'}

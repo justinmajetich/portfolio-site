@@ -13,7 +13,7 @@ const StyledContainer = styled.div`
     margin-bottom: 40px;
 `
 
-export default function ProjectGallery({ projects }) {
+export default function ProjectGallery({ projects, categorySlug }) {
     return (
         <StyledContainer>
             {projects.map( project => {
@@ -21,6 +21,7 @@ export default function ProjectGallery({ projects }) {
                     <ProjectCard
                         key={project.id}
                         project={project}
+                        categorySlug={categorySlug}
                     />
                 )}
             )}

@@ -19,7 +19,7 @@ export default function ProjectDetail(props) {
     return (
         <StyledWrapper>
             <StyledDetailTitle>{props.title + ':'}</StyledDetailTitle>
-            <StyledDetailContent>{props.content}</StyledDetailContent>
+            <StyledDetailContent>{props.description}</StyledDetailContent>
         </StyledWrapper>
     )
 }

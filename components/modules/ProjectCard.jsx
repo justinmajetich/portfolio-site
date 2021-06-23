@@ -15,7 +15,7 @@ const StyledWrapper = styled.div`
     cursor: pointer;
 `
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, categorySlug }) {
 
     const [isHovered, setIsHovered] = useState(false)
 
@@ -38,7 +38,13 @@ export default function ProjectCard({ project }) {
                 layout={'fill'}
                 objectFit={'cover'}
             />
-            {isHovered ? <ProjectCardOverlay title={project.title}/> : null}
+            {isHovered ?
+                <ProjectCardOverlay
+                    title={project.title}
+                    slug={project.slug}
+                    categorySlug={categorySlug}
+                />
+                : null}
         </StyledWrapper>
     )
 }

@@ -62,7 +62,7 @@ animation: ${fadeIn} .2s 1;
 
 export default function ProjectCardOverlay(props) {
     return (
-        <Link href={'[sectionID]/' + props.title}>
+        <Link href={'/' + props.categorySlug + '/' + props.slug}>
             <StyledHoverOverlay>
                 <StyledOverlayBackground />
                 <StyledCardHeader>{props.title}</StyledCardHeader>

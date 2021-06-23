@@ -5,15 +5,15 @@ import ParseTextToParagraphs from 'utils/ParseTextToParagraphs'
 import ProjectGallery from 'components/modules/ProjectGallery'
 
 export default function CategoryContent(props) {
-
-    console.log(props)
-
     return (
         <ContentContainer>
             <h1>{props.content.title}</h1>
             {ParseTextToParagraphs(props.content.summary, StyledParagraph)}
             <ProjectsFilter fitlerTags={props.content.tags} />
-            <ProjectGallery projects={props.content.projects} />
+            <ProjectGallery
+                projects={props.content.projects}
+                categorySlug={props.content.slug}
+            />
         </ContentContainer>
     )
 }
