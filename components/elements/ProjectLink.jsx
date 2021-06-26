@@ -2,12 +2,15 @@ import styled from "styled-components"
 import Link from "next/link"
 import Image from "next/image"
 import StyledParagraph from "./StyledParagraph"
+import Icon from "./Icon"
 
 const StyledContainer = styled.div`
     display: flex;
-    cursor: pointer;
+    align-items: center;
 
     margin: 10px 0;
+
+    cursor: pointer;
 `
 
 const StyledLinkDescription = styled(StyledParagraph)`
@@ -16,17 +19,21 @@ const StyledLinkDescription = styled(StyledParagraph)`
     color: blue;
 `
 
-export default function ProjectLink(props) {
+const StyledIconWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 14px;
+    height: 14px;
+`
+
+export default function ProjectLink({ link }) {
     return (
-        <Link href={'/'}>
+        <Link href={link.url}>
             <StyledContainer>
-                <Image 
-                    src={'/images/icons/github2.svg'}
-                    alt={'Project Link'}
-                    width={14}
-                    height={14}
-                />
-                <StyledLinkDescription>{props.title}</StyledLinkDescription>
+                <StyledIconWrapper><Icon type={link.type}/></StyledIconWrapper>
+                <StyledLinkDescription>{link.title}</StyledLinkDescription>
             </StyledContainer>
         </Link>
     )
