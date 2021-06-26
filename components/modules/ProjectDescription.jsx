@@ -38,7 +38,7 @@ export default function ProjectDescription(props) {
                     return (
                         <ProjectLink
                             key={link.id}
-                            title={link.title}
+                            link={link}
                         />
                     )
                 })}
