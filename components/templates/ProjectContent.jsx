@@ -1,9 +1,10 @@
 import styled from 'styled-components'
-import ContentContainer from "components/elements/ContentContainer";
-import ProjectCoverImage from "components/elements/ProjectCoverImage";
-import ProjectDescription from "components/modules/ProjectDescription";
-import MediaGallery from 'components/modules/MediaGallery';
-import ProcessSection from 'components/modules/ProcessSection';
+import ContentContainer from "components/elements/ContentContainer"
+import ProjectCoverImage from "components/elements/ProjectCoverImage"
+import ProjectDescription from "components/modules/ProjectDescription"
+import MediaGallery from 'components/modules/MediaGallery'
+import ProcessSection from 'components/modules/ProcessSection'
+import ProjectFeaturedMedia from 'components/modules/ProjectFeaturedMedia'
 
 const StyledContainer = styled.div`
     /* This margin conpensates for the banner.
@@ -25,11 +26,11 @@ export default function ProjectContent({ content }) {
                     details={content.details}
                     links={content.links}
                 />
-                
+                <ProjectFeaturedMedia media={content.featured_media}/>
                 {content.process_sections.map(section => <ProcessSection key={section.id} content={section} />)}
                 <h1>Gallery</h1>
                 <MediaGallery
-                    media={content.media_gallery.media}
+                    media={content.gallery_media}
                 />
             </ContentContainer>
         </StyledContainer>
