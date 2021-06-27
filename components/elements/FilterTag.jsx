@@ -23,7 +23,7 @@ const StyledBackground = styled.div`
 
     margin: 6px 16px 6px 0px;
 
-    border-radius: 10px;
+    border-radius: 5px;
     background: lightgreen;
     opacity: ${props => props.isSelected ? '0.8' : '0.5'};
     
@@ -42,6 +42,7 @@ export default function FilterTag(props) {
 
     function handleClick() {
         setIsSelected(!isSelected)
+        props.setFilterTagActivity(props.tag, !isSelected)
     }
 
     return (
@@ -49,7 +50,7 @@ export default function FilterTag(props) {
             onClick={handleClick}
             isSelected={isSelected}
         >
-            <StyledText>{props.children}</StyledText>
+            <StyledText>{props.tag.name}</StyledText>
         </StyledBackground>
     )
 }

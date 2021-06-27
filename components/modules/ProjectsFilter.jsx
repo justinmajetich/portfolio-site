@@ -1,5 +1,5 @@
-import FilterTag from 'components/elements/FilterTag'
 import styled from 'styled-components'
+import FilterTag from 'components/elements/FilterTag'
 
 
 const StyledTagsContainer = styled.div`
@@ -11,7 +11,15 @@ const StyledTagsContainer = styled.div`
 export default function ProjectsFilter(props) {
     return (
         <StyledTagsContainer>
-            {props.fitlerTags.map((tag, i) => <FilterTag key={i}>{tag.name}</FilterTag>)}
+            {props.tags.map(tag => {
+                return (
+                    <FilterTag
+                        key={tag.id}
+                        tag={tag}
+                        setFilterTagActivity={props.setFilterTagActivity}
+                    />
+                )}
+            )}
         </StyledTagsContainer>   
     )
 }

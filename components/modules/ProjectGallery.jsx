@@ -1,5 +1,6 @@
 import ProjectCard from 'components/modules/ProjectCard'
 import styled from 'styled-components'
+import compareTags from 'utils/compareTags'
 
 const StyledContainer = styled.div`
     display: flex;
@@ -13,18 +14,20 @@ const StyledContainer = styled.div`
     margin-bottom: 40px;
 `
 
-export default function ProjectGallery({ projects, categorySlug }) {
+export default function ProjectGallery(props) {
     return (
         <StyledContainer>
-            {projects.map( project => {
-                return (
-                    <ProjectCard
-                        key={project.id}
-                        project={project}
-                        categorySlug={categorySlug}
-                    />
-                )}
-            )}
+            {props.projects.map( project => {
+                if (props.activeFilterTags.length <= 0 || compareTags(props.activeFilterTags, project.tags)) {
+                    return (
+                        <ProjectCard
+                            key={project.id}
+                            project={project}
+                            categorySlug={props.categorySlug}
+                        />
+                    )
+                }
+            })}
         </StyledContainer>
     )
 }
