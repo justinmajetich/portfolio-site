@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import Image from 'next/image'
-import { device } from 'utils/media-breakpoints'
 import ProjectCardOverlay from 'components/elements/ProjectCardOverlay'
+import { apiURL } from 'config/apiURL'
 
 const StyledWrapper = styled.div`
     overflow: hidden;
@@ -33,7 +33,7 @@ export default function ProjectCard({ project, categorySlug }) {
             onMouseLeave={handleMouseLeave}
         >
             <Image
-                src={'http://localhost:1337' + project.cover.formats.medium.url}
+                src={apiURL + project.cover.formats.medium.url}
                 alt={project.cover.alternativeText}
                 layout={'fill'}
                 objectFit={'cover'}
