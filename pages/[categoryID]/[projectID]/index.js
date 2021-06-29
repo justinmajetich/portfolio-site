@@ -1,5 +1,6 @@
 import ProjectLayout from 'components/layouts/ProjectLayout'
 import Head from 'next/head'
+import { apiURL } from 'config/apiURL'
 
 export default function Project({ content }) {
   return (
@@ -18,7 +19,7 @@ export default function Project({ content }) {
 export async function getStaticPaths() {
 
   // Call an external API endpoint to get posts
-  const res = await fetch('http://localhost:1337/projects')
+  const res = await fetch(apiURL + 'projects')
   const projects = await res.json()
 
   // Get the paths we want to pre-render based on posts
@@ -36,7 +37,7 @@ export async function getStaticPaths() {
   export async function getStaticProps({ params }) {
 
   // If the route is like '/categories/code', then params.categoryID is 'code'
-  const res = await fetch(`http://localhost:1337/projects?slug=${params.projectID}`)
+  const res = await fetch(apiURL + `projects?slug=${params.projectID}`)
 
   const data = await res.json()
 
