@@ -9,7 +9,9 @@ const StyledNavText = styled.p`
 
 export default function NavLink(props) {
     return (
-        <Link href={props.href}>
+        <Link
+            href={props.href}
+        >
             <StyledNavText>
                 {props.text}
             </StyledNavText>

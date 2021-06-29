@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import NavLink from 'components/elements/NavLink'
-import MenuIcon from 'components/elements/MenuIcon'
+import MenuIcon from 'components/modules/MenuIcon'
 import SocialsBar from './SocialsBar'
 
 const StyledNavigation = styled.div`
@@ -45,11 +45,11 @@ export default function Navigation(props) {
             ?
                 <StyledMenuWrapper>
                     <StyledNavLinksContainer>
-                        <NavLink text={'Home'} />
-                        <NavLink text={'Code'} />
-                        <NavLink text={'Art Dept'} />
-                        <NavLink text={'Music'} />
-                        <NavLink text={'About Me'} />
+                        <NavLink text={'Home'} href={'/'}/>
+                        <NavLink text={'Code'} href={'/code'}/>
+                        <NavLink text={'Art Dept'} href={'/art-dept'}/>
+                        <NavLink text={'Music'} href={'/music'}/>
+                        <NavLink text={'About Me'} href={'/about'}/>
                     </StyledNavLinksContainer>
                     <SocialsBar />
                 </StyledMenuWrapper>
