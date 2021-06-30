@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import styled from 'styled-components'
-import { apiURL } from 'config/apiURL'
 
 const StyledBannerWrapper = styled.div`
     position: absolute;
@@ -17,7 +16,7 @@ export default function ProjectCoverImage(props) {
     return (
         <StyledBannerWrapper>
             <Image
-                src={apiURL + props.coverImage.url}
+                src={props.coverImage.url}
                 alt={props.coverImage.alternativeText}
                 layout={'fill'}
                 objectFit={'cover'}

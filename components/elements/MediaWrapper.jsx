@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
-import { apiURL } from 'config/apiURL'
 
 const StyledMediaWrapper = styled.div`
     display: flex;
@@ -45,7 +44,7 @@ export default function MediaWrapper({ media }) {
                 </StyledReactPlayerWrapper>
                 :
                 <Image
-                    src={apiURL + media.strapi_media.url}
+                    src={media.strapi_media.url}
                     alt={media.strapi_media.alternativeText}
                     width={media.strapi_media.width}
                     height={media.strapi_media.height}
