@@ -26,13 +26,15 @@ export default function ProjectCard({ project, categorySlug }) {
         setIsHovered(false)
     }
 
+    console.log(project.cover)
+
     return (
         <StyledWrapper
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
             <Image
-                src={project.cover.formats.medium.url}
+                src={project.cover.url}
                 alt={project.cover.alternativeText}
                 layout={'fill'}
                 objectFit={'cover'}
