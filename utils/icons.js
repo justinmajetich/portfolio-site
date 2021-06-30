@@ -7,5 +7,6 @@ export const icons = {
     instagram: '/images/icons/instagram.svg',
     youtube: '/images/icons/youtube.svg',
     linkedin: '/images/icons/linkedin.svg',
-    spotify: '/images/icons/spotify.svg'
+    spotify: '/images/icons/spotify.svg',
+    download: '/images/icons/download.svg'
 }
