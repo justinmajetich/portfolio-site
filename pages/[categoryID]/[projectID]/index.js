@@ -30,7 +30,7 @@ export async function getStaticPaths() {
     },
   }))
 
-  return { paths, fallback: false }
+  return { paths, fallback: 'blocking' }
 }
 
   // params contains the 'categoryID'.
@@ -44,6 +44,7 @@ export async function getStaticPaths() {
   return { 
     props: {
       content: data[0]
-    } 
+    },
+    revalidate: 60,
   }
 }

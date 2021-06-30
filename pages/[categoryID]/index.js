@@ -26,7 +26,7 @@ export async function getStaticPaths() {
     params: { categoryID: category.slug },
   }))
 
-  return { paths, fallback: false }
+  return { paths, fallback: 'blocking' }
 }
 
 export async function getStaticProps({ params }) {
@@ -39,6 +39,7 @@ export async function getStaticProps({ params }) {
   return { 
     props: {
       content: data[0]
-    } 
+    },
+    revalidate: 60,
   }
 }
