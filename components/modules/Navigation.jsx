@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { useState } from 'react'
 import NavLink from 'components/elements/NavLink'
 import MenuIcon from 'components/modules/MenuIcon'
-import SocialsBar from './SocialsBar'
 import { fadeIn } from 'utils/animations'
 
 const StyledMenuWrapper = styled.div`
