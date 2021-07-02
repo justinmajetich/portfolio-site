@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import styled, { keyframes } from 'styled-components'
+import { fadeIn } from 'utils/animations'
 
-const fadeIn = keyframes`
-    from { opacity: 0; } to { opacity: 1; }
-`
 
 const partialFadeIn = keyframes`
     from { opacity: 0; } to { opacity: 0.9; }
@@ -38,16 +36,7 @@ color: white;
 
 animation: ${fadeIn} .2s 1;
 `
-const StyledDate = styled.p`
-position: absolute;
-bottom: 0;
 
-margin: 20px;
-
-color: white;
-
-animation: ${fadeIn} .2s 1;
-`
 const StyledArrow = styled.h2`
 position: absolute;
 bottom: 0;
