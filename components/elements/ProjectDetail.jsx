@@ -7,11 +7,11 @@ const StyledWrapper = styled.div`
 
 const StyledDetailContent = styled.p`
     margin: 0px 5px 0px 0px;
-    color: darkgrey;
+    color: ${props => props.theme.darkGray};
 `
 
 const StyledDetailTitle = styled(StyledDetailContent)`
-    font-weight: bold;
+    font-weight: 500;
     color: black;
 `
 
