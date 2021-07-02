@@ -4,7 +4,7 @@ import { useState } from 'react'
 const grow = keyframes`
     {
         0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
+        50% { transform: scale(0.9); }
         100% { transform: scale(1); }    
     }
 `
@@ -22,17 +22,21 @@ const StyledBackground = styled.div`
     height: 25px;
 
     margin: 6px 16px 6px 0px;
+    padding: 0 10px;
 
     border-radius: 5px;
-    background: lightgreen;
+    background: ${props => props.theme[props.categoryID]};
     opacity: ${props => props.isSelected ? '0.8' : '0.5'};
     
-    ${props => props.isSelected || props.isDeselected ? growInterpolation : 'animation: none;'};
+    ${props => props.isSelected ? growInterpolation : ''};
+
+    cursor: pointer;
 `
 
 const StyledText = styled.p`
     font-size: 0.8em;
-    color: green;
+    font-weight: ${props => props.isSelected ? '500' : '400'};
+    color: black;
     margin: 0;
 `
 
@@ -49,8 +53,13 @@ export default function FilterTag(props) {
         <StyledBackground
             onClick={handleClick}
             isSelected={isSelected}
+            categoryID={props.categoryID}
         >
-            <StyledText>{props.tag.name}</StyledText>
+            <StyledText
+                isSelected={isSelected}
+            >
+                {props.tag.name}
+            </StyledText>
         </StyledBackground>
     )
 }
