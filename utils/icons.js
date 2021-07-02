@@ -8,5 +8,8 @@ export const icons = {
     youtube: '/images/icons/youtube.svg',
     linkedin: '/images/icons/linkedin.svg',
     spotify: '/images/icons/spotify.svg',
-    download: '/images/icons/download.svg'
+    download: '/images/icons/download.svg',
+    gallery: '/images/icons/gallery.svg',
+    arrowVertical: '/images/icons/arrow-vertical.svg',
+    arrowHorizontal: '/images/icons/arrow-horizontal.svg'
 }
