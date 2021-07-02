@@ -24,6 +24,7 @@ export default function ProjectGallery(props) {
                             key={project.id}
                             project={project}
                             categorySlug={props.categorySlug}
+                            categoryID={props.categoryID}
                         />
                     )
                 }

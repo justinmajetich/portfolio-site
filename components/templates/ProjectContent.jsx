@@ -5,6 +5,7 @@ import ProjectDescription from "components/modules/ProjectDescription"
 import MediaGallery from 'components/modules/MediaGallery'
 import ProcessSection from 'components/modules/ProcessSection'
 import ProjectFeaturedMedia from 'components/modules/ProjectFeaturedMedia'
+import Icon from 'components/elements/Icon'
 
 const StyledContainer = styled.div`
     /* This margin conpensates for the banner.
@@ -13,11 +14,22 @@ const StyledContainer = styled.div`
     margin-top: 25vh;
 `
 
+const StyledHeadingWrapper = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+const StyledIconWrapper = styled.div`
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+`
+
 export default function ProjectContent({ content }) {
     return (
         <StyledContainer>
             <ProjectCoverImage
-                coverImage={content.cover}
+                coverImage={content.cover_image}
             />
             <ContentContainer>
                 <ProjectDescription
@@ -28,7 +40,10 @@ export default function ProjectContent({ content }) {
                 />
                 <ProjectFeaturedMedia media={content.featured_media}/>
                 {content.process_sections.map(section => <ProcessSection key={section.id} content={section} />)}
-                <h1>Gallery</h1>
+                <StyledHeadingWrapper>
+                    <StyledIconWrapper><Icon type={'gallery'}/></StyledIconWrapper>
+                    <h3>Gallery</h3>
+                </StyledHeadingWrapper>
                 <MediaGallery
                     media={content.gallery_media}
                 />

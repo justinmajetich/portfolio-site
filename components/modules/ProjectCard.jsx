@@ -14,28 +14,32 @@ const StyledWrapper = styled.div`
     cursor: pointer;
 `
 
-export default function ProjectCard({ project, categorySlug }) {
+export default function ProjectCard({ project, categorySlug, categoryID }) {
 
     const [isHovered, setIsHovered] = useState(false)
 
-    function handleMouseEnter() {
+    function handleMouseOver(e) {
         setIsHovered(true)
     }
 
-    function handleMouseLeave() {
+    function handleMouseLeave(e) {
         setIsHovered(false)
     }
 
-    console.log(project.cover)
+    function handleClick(e) {
+        e.preventDefault()
+        setIsHovered(true)
+    }
 
     return (
         <StyledWrapper
-            onMouseEnter={handleMouseEnter}
+            onMouseOver={handleMouseOver}
             onMouseLeave={handleMouseLeave}
+            onClick={handleClick}
         >
             <Image
-                src={project.cover.url}
-                alt={project.cover.alternativeText}
+                src={project.card_image.url}
+                alt={project.card_image.alternativeText}
                 layout={'fill'}
                 objectFit={'cover'}
             />
@@ -44,6 +48,7 @@ export default function ProjectCard({ project, categorySlug }) {
                     title={project.title}
                     slug={project.slug}
                     categorySlug={categorySlug}
+                    categoryID={categoryID}
                 />
                 : null}
         </StyledWrapper>
