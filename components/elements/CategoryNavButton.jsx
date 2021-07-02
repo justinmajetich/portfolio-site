@@ -41,7 +41,7 @@ const StyledButtonBackground = styled.div`
 
     filter: ${props => props.isHovered ? 'blur(35px)' : 'blur(15px)'};
 
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
 
     animation: ${bgPulse} 2.5s ${props => props.categoryID / 3}s cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite;
 `
