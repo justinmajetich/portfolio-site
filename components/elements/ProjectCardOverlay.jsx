@@ -6,7 +6,7 @@ const fadeIn = keyframes`
 `
 
 const partialFadeIn = keyframes`
-    from { opacity: 0; } to { opacity: 0.8; }
+    from { opacity: 0; } to { opacity: 0.9; }
 `
 
 const StyledHoverOverlay = styled.div`
@@ -22,10 +22,10 @@ const StyledOverlayBackground = styled.div`
 width: 100%;
 height: 100%;
 
-background: lightgreen;
+background: ${props => props.theme[props.categoryID.toString()]};
 animation: ${partialFadeIn} .2s 1;
 
-opacity: 0.8;
+opacity: 0.9;
 `
 
 const StyledCardHeader = styled.h2`
@@ -64,7 +64,7 @@ export default function ProjectCardOverlay(props) {
     return (
         <Link href={'/' + props.categorySlug + '/' + props.slug}>
             <StyledHoverOverlay>
-                <StyledOverlayBackground />
+                <StyledOverlayBackground categoryID={props.categoryID}/>
                 <StyledCardHeader>{props.title}</StyledCardHeader>
                 <StyledArrow>{'->'}</StyledArrow>
             </StyledHoverOverlay>
