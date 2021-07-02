@@ -1,22 +1,17 @@
 import styled from 'styled-components'
+import { device } from 'utils/media-breakpoints'
 import ContentContainer from 'components/elements/ContentContainer'
 import LandingDescription from 'components/modules/LandingDescription'
-import SocialsBar from 'components/modules/SocialsBar'
 import CategoryNavButton from 'components/elements/CategoryNavButton'
 
-const StyledSocialsBarWrapper = styled.div`
-    padding: 30px;
-`
 
 const StyledNavContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 
     width: 100%;
-
-    margin-top: 10px;
+    margin-top: 80px;
 `
 
 export default function LandingContent(props) {
@@ -25,21 +20,24 @@ export default function LandingContent(props) {
             <LandingDescription />
             <StyledNavContainer>
                 <CategoryNavButton
-                    name={'Code'}
+                    title={'Code'}
+                    description={'Games, XR & web'}
                     sectionID={'code'}
+                    categoryID={1}
                 />
                 <CategoryNavButton
-                    name={'Art Dept'}
+                    title={'Art Dept'}
+                    description={'Design, direction & styling'}
                     sectionID={'art-dept'}
+                    categoryID={2}
                 />
                 <CategoryNavButton
-                    name={'Music'}
-                    sectionID={'music'}    
+                    title={'Music'}
+                    description={'Songwriting, scores & video'}
+                    sectionID={'music'}  
+                    categoryID={3}  
                 />
             </StyledNavContainer>
-            <StyledSocialsBarWrapper>
-                <SocialsBar />
-            </StyledSocialsBarWrapper>
         </ContentContainer>
     )
 }
