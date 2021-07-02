@@ -26,7 +26,9 @@ export default function CategoryContent(props) {
     }
 
     return (
-        <ContentContainer>
+        <ContentContainer
+            categoryID={props.content.id}
+        >
             <h1>{props.content.title}</h1>
             {parseTextToParagraphs(props.content.summary, StyledSummary)}
             <ProjectsFilter

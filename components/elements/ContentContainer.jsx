@@ -9,11 +9,17 @@ const StyledContentContainer = styled.div`
     height: 100%;
 
     padding: 0 10%;
+
+    * ::selection {
+        background: ${props => props.categoryID ? props.theme[props.categoryID.toString()] : ''};
+    }
 `
 
 export default function ContentContainer(props) {
     return (
-        <StyledContentContainer>
+        <StyledContentContainer
+            categoryID={props.categoryID}
+        >
             {props.children}
         </StyledContentContainer>
     )

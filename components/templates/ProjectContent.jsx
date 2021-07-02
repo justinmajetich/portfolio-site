@@ -31,7 +31,9 @@ export default function ProjectContent({ content }) {
             <ProjectCoverImage
                 coverImage={content.cover_image}
             />
-            <ContentContainer>
+            <ContentContainer
+                categoryID={content.categories[0].id}
+            >
                 <ProjectDescription
                     title={content.title}
                     summary={content.summary}

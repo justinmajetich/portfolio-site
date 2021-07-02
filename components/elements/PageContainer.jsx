@@ -5,11 +5,10 @@ const StyledPageContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     min-height: 100vh;
 
     padding-bottom: 50px;
-
-    overflow: hidden;
 `
 
 export default function PageContainer(props) {

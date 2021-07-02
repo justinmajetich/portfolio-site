@@ -17,6 +17,8 @@ const StyledContainer = styled.div`
     height: 50px;
 
     padding: 15px;
+
+    /* background: white; */
 `
 
 const StyledInitials = styled.h3`
