@@ -11,5 +11,6 @@ export const icons = {
     download: '/images/icons/download.svg',
     gallery: '/images/icons/gallery.svg',
     arrowVertical: '/images/icons/arrow-vertical.svg',
-    arrowHorizontal: '/images/icons/arrow-horizontal.svg'
+    arrowHorizontal: '/images/icons/arrow-horizontal.svg',
+    arrowHorizontalShort: '/images/icons/arrow-horizontal-short.svg'
 }
