@@ -38,6 +38,7 @@ export async function getStaticProps({ params }) {
 
   return { 
     props: {
+      key: data[0].id,
       content: data[0]
     },
     revalidate: 60,
