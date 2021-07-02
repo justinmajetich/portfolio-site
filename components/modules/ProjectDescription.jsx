@@ -3,10 +3,6 @@ import ProjectDetail from 'components/elements/ProjectDetail'
 import ProjectLink from 'components/elements/ProjectLink'
 import StyledParagraph from 'components/elements/StyledParagraph'
 
-const StyledProjectTitle = styled.h1`
-
-`
-
 const StyledDetailsWrapper = styled.div`
     margin-top: 20px;
 `
@@ -18,7 +14,7 @@ const StyledLinksWrapper = styled.div`
 export default function ProjectDescription(props) {
     return (
         <div>
-            <StyledProjectTitle>{props.title}</StyledProjectTitle>
+            <h2>{props.title}</h2>
             <StyledParagraph>
                 {props.summary}
             </StyledParagraph>
