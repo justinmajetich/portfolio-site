@@ -4,9 +4,6 @@ import NavLink from 'components/elements/NavLink'
 import MenuIcon from 'components/modules/MenuIcon'
 import SocialsBar from './SocialsBar'
 
-const StyledNavigation = styled.div`
-`
-
 const StyledMenuWrapper = styled.div`
     position: absolute;
     top: 0;
@@ -22,7 +19,9 @@ const StyledMenuWrapper = styled.div`
     height: 100vh;
     padding: 60px;
 
-    background: white;
+    background: ${props => props.categoryID ? props.theme[props.categoryID.toString()] : props.theme.lightGray};
+
+    overflow: hidden;
 `
 
 const StyledNavLinksContainer = styled.div`
@@ -32,18 +31,15 @@ const StyledNavLinksContainer = styled.div`
 `
 
 export default function Navigation(props) {
-
-    const [menuIsActive, setMenuIsActive] = useState(false)
-
     return (
-        <StyledNavigation>
+        <>
             <MenuIcon
-                menuIsActive={menuIsActive}
-                setMenuIsActive={setMenuIsActive}
+                menuIsActive={props.menuIsActive}
+                setMenuIsActive={props.setMenuIsActive}
             />
-            {menuIsActive
+            {props.menuIsActive
             ?
-                <StyledMenuWrapper>
+                <StyledMenuWrapper categoryID={props.categoryID}>
                     <StyledNavLinksContainer>
                         <NavLink text={'Home'} href={'/'}/>
                         <NavLink text={'Code'} href={'/code'}/>
@@ -56,6 +52,6 @@ export default function Navigation(props) {
             :
                 null
             }
-        </StyledNavigation>
+        </>
     )
 }

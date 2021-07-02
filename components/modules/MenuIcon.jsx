@@ -8,8 +8,8 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
 
-    width: 18px;
-    height: 18px;
+    width: 36px;
+    height: 36px;
 
     cursor: pointer;
 `

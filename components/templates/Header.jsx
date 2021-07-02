@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Identity from 'components/elements/Identity'
 import Navigation from 'components/modules/Navigation'
 
 const StyledContainer = styled.div`
@@ -10,7 +9,6 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: ${props => props.isLanding ? 'flex-end' : 'space-between'}; */
     justify-content: flex-end;
 
 
@@ -18,15 +16,16 @@ const StyledContainer = styled.div`
     height: 50px;
 
     padding: 15px;
-
-    /* background: white; */
 `
 
 export default function Header(props) {
     return (
-        <StyledContainer isLanding={props.isLanding}>
-            {/* {props.isLanding ? null : <Identity />} */}
-            <Navigation />
+        <StyledContainer>
+            <Navigation
+                categoryID={props.categoryID}
+                menuIsActive={props.menuIsActive}
+                setMenuIsActive={props.setMenuIsActive}
+            />
         </StyledContainer>
     )
 }
