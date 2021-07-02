@@ -35,7 +35,6 @@ const StyledBackground = styled.div`
 
 const StyledText = styled.p`
     font-size: 0.8em;
-    font-weight: ${props => props.isSelected ? '500' : '400'};
     color: black;
     margin: 0;
 `
