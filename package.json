@@ -11,6 +11,7 @@
     "@react-spring/web": "^9.2.3",
     "next": "^10.2.3",
     "react": "^17.0.2",
+    "react-div-100vh": "^0.6.0",
     "react-dom": "^17.0.2",
     "react-player": "^2.9.0",
     "react-responsive": "^8.2.0",
