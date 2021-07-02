@@ -12,6 +12,7 @@ export default function CategoryLayout({ content }) {
     return (
         <PageContainer>
             <Header
+                pageID={content.id}
                 categoryID={content.id}
                 menuIsActive={menuIsActive}
                 setMenuIsActive={setMenuIsActive}

@@ -12,6 +12,7 @@ export default function LandingLayout() {
     return (
         <PageContainer>
             <Header
+                pageID={0}
                 menuIsActive={menuIsActive}
                 setMenuIsActive={setMenuIsActive}
             />

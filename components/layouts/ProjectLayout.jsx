@@ -11,6 +11,7 @@ export default function ProjectLayout({ content }) {
     return (
         <PageContainer>
             <Header
+                pageID={content.categories[0].id}
                 categoryID={content.categories[0].id}
                 menuIsActive={menuIsActive}
                 setMenuIsActive={setMenuIsActive}
