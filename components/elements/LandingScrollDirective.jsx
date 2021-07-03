@@ -1,4 +1,5 @@
 import styled, { keyframes }from 'styled-components'
+import Link from 'next/link'
 import Icon from 'components/elements/Icon'
 
 const arrowBob = keyframes`
@@ -30,9 +31,11 @@ const StyledArrowWrapper = styled.div`
 export default function LandingScrollDirective(props) {
     return (
         <StyledScrollDirective>
-            <StyledArrowWrapper>
-                <Icon type='arrowVertical'/>
-            </StyledArrowWrapper>
+            <Link href={'/#work'}>
+                <StyledArrowWrapper>
+                    <Icon type='arrowVertical'/>
+                </StyledArrowWrapper>
+            </Link>
         </StyledScrollDirective>
     )
 }
