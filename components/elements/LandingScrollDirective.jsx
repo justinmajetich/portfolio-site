@@ -1,4 +1,5 @@
 import styled, { keyframes }from 'styled-components'
+import { device } from 'utils/media-breakpoints'
 import Link from 'next/link'
 import Icon from 'components/elements/Icon'
 
@@ -26,6 +27,10 @@ const StyledArrowWrapper = styled.div`
     height: 140px;
 
     animation: ${arrowBob} 2s ease-in-out infinite;
+
+    @media ${device.laptop} {
+        display: none;
+    }
 `
 
 export default function LandingScrollDirective(props) {
