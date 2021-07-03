@@ -38,7 +38,7 @@ export default function Navigation(props) {
     const [hoveredLink, setHoveredLink] = useState(null)
 
     const linkData = [
-        {id: 0, text: 'Home', href: '/'},
+        // {id: 0, text: 'Home', href: '/'},
         {id: 1, text: 'Code', href: '/code'},
         {id: 2, text: 'Art Dept', href: '/art-dept'},
         {id: 3, text: 'Music', href: '/music'},
