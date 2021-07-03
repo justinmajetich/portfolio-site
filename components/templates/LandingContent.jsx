@@ -14,11 +14,17 @@ const StyledNavContainer = styled.div`
     margin-top: 80px;
 `
 
+const StlyedIDAnchor = styled.div`
+    position: relative;
+    top: -50px;
+`
+
 export default function LandingContent(props) {
     return (
         <ContentContainer>
             <LandingDescription />
             <StyledNavContainer>
+                <StlyedIDAnchor id={'work'}/>
                 <CategoryNavButton
                     title={'Code'}
                     description={'Games, XR & web'}
