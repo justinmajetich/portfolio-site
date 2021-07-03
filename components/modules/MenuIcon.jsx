@@ -30,7 +30,7 @@ export default function MenuIcon(props) {
             animationData: animationData,
         });
 
-        anim.current.setSpeed(1.5)
+        anim.current.setSpeed(1.2)
         console.log('USE EFFECT')
 
         return () => anim.current.destroy()
