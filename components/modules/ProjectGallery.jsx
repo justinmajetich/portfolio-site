@@ -1,6 +1,7 @@
 import ProjectCard from 'components/modules/ProjectCard'
 import styled from 'styled-components'
 import compareTags from 'utils/compareTags'
+import { device } from 'utils/media-breakpoints'
 
 const StyledContainer = styled.div`
     display: flex;
@@ -10,8 +11,11 @@ const StyledContainer = styled.div`
     align-items: center;
 
     width: 100%;
+    margin: 10px 0px 40px 0px;
 
-    margin-bottom: 40px;
+    @media ${device.tablet} {
+        margin: 20px 0px 40px 0px;
+    }
 `
 
 export default function ProjectGallery(props) {
