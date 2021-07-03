@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
@@ -32,7 +31,7 @@ const StyledButtonBackground = styled.div`
     width: 100%;
     height: 100%;
 
-    border-radius: 50px;
+    border-radius: 60px;
 
     background-image: linear-gradient(to ${props => props.categoryID % 2 == 0 ? 'left' : 'right'}, ${props => props.theme[props.categoryID]}, 35%, rgba(255, 255, 255, 0) 95%);
     background-size: ${props => props.isHovered ? '200% 100%' : '80% 100%'};
@@ -49,12 +48,9 @@ const StyledButtonBackground = styled.div`
 const StyledButtonContent = styled.div`
     display: flex;
     flex-direction: column;
-
     width: 100%;
     padding: 0 30px;
-
     text-align: ${props => props.categoryID % 2 == 0 ? 'right' : 'left'};
-
 
     h2 {
         margin: 0;
