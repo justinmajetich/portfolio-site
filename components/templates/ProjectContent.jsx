@@ -7,11 +7,13 @@ import ProcessSection from 'components/modules/ProcessSection'
 import ProjectFeaturedMedia from 'components/modules/ProjectFeaturedMedia'
 import Icon from 'components/elements/Icon'
 
+
 const StyledContainer = styled.div`
-    /* This margin conpensates for the banner.
-     * It should always be equal to banner + header height.
-     **/
-    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 720px;
 `
 
 const StyledHeadingWrapper = styled.div`
@@ -27,13 +29,13 @@ const StyledIconWrapper = styled.div`
 
 export default function ProjectContent({ content }) {
     return (
-        <StyledContainer>
-            <ProjectCoverImage
-                coverImage={content.cover_image}
-            />
-            <ContentContainer
-                categoryID={content.categories[0].id}
-            >
+        <ContentContainer
+            categoryID={content.categories[0].id}
+        >
+            <StyledContainer>
+                <ProjectCoverImage
+                    coverImage={content.cover_image}
+                />
                 <ProjectDescription
                     title={content.title}
                     summary={content.summary}
@@ -49,7 +51,8 @@ export default function ProjectContent({ content }) {
                 <MediaGallery
                     media={content.gallery_media}
                 />
-            </ContentContainer>
-        </StyledContainer>
+            </StyledContainer>
+
+        </ContentContainer>
     )
 }
