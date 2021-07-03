@@ -13,7 +13,6 @@ const StyledMenuWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /* justify-content: space-between; */
 
     width: 100%;
     height: 100vh;
@@ -21,8 +20,6 @@ const StyledMenuWrapper = styled.div`
 
     background: ${props => props.categoryID ? props.theme[props.categoryID.toString()] : props.theme.lightGray};
     animation: ${fadeIn} .25s;
-
-    /* overflow: hidden; */
 `
 
 const StyledNavLinksContainer = styled.div`
