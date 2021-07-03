@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { fadeIn } from 'utils/animations'
 
 const StyledPageContainer = styled.div`
     position: relative;
@@ -9,6 +10,8 @@ const StyledPageContainer = styled.div`
     min-height: 100vh;
 
     padding-bottom: 50px;
+
+    animation: ${fadeIn} 0.25s;
 `
 
 export default function PageContainer(props) {
