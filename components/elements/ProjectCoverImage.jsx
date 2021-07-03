@@ -2,13 +2,12 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 const StyledBannerWrapper = styled.div`
-    position: absolute;
+    position: relative;
     top: 0px;
 
-    width: 100vw;
-    height: 30vh;
-    /* min-height: 200px; */
-
+    width: 100%;
+    height: 300px;
+    
     overflow: hidden;
 `
 
