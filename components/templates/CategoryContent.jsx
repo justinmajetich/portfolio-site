@@ -5,6 +5,7 @@ import StyledParagraph from 'components/elements/StyledParagraph'
 import ProjectsFilter from 'components/modules/ProjectsFilter'
 import parseTextToParagraphs from 'utils/parseTextToParagraphs'
 import ProjectGallery from 'components/modules/ProjectGallery'
+import { device } from 'utils/media-breakpoints'
 
 const StyledContainer = styled.div`
     display: flex;
@@ -12,6 +13,10 @@ const StyledContainer = styled.div`
     justify-content: center;
     width: 100%;
     max-width: 720px;
+
+    @media ${device.tablet} {
+        margin-top: 100px;
+    }
 `
 
 const StyledSummary = styled(StyledParagraph)`
