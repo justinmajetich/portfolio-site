@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import Link from 'next/link'
 import Navigation from 'components/modules/Navigation'
 import { fadeIn } from 'utils/animations'
 
@@ -32,9 +33,11 @@ export default function Header(props) {
     return (
         <StyledContainer menuIsActive={props.menuIsActive}>
             {props.menuIsActive ?
-                <StyledInitials>
-                    {'JM'}
-                </StyledInitials>
+                <Link href={'/'}>
+                    <StyledInitials>
+                        {'JM'}
+                    </StyledInitials>
+                </Link>
             : null}
             <Navigation
                 currentPageID={props.pageID}
