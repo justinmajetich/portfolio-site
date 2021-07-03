@@ -27,6 +27,8 @@ const StyledInitials = styled.h3`
     z-index: 2;
 
     animation: ${fadeIn} .25s 1;
+
+    cursor: pointer; 
 `
 
 export default function Header(props) {
