@@ -16,7 +16,7 @@ const StyledContainer = styled.div`
 
 const StyledCopyright = styled.p`
     font-size: 0.8em;
-    color: black;
+    color: ${props => props.theme.darkGray};
 `
 
 export default function Footer() {
