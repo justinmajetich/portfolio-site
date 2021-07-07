@@ -46,7 +46,7 @@ export default function ProjectContent({ content }) {
                 {content.process_sections.map(section => <ProcessSection key={section.id} content={section} />)}
                 <StyledHeadingWrapper>
                     <StyledIconWrapper><Icon type={'gallery'}/></StyledIconWrapper>
-                    <h3>Gallery</h3>
+                    <h2>Gallery</h2>
                 </StyledHeadingWrapper>
                 <MediaGallery
                     media={content.gallery_media}

@@ -7,10 +7,10 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
 
-    width: 100%;
+    width: 680px;
     margin: 10px 0px 40px 0px;
 
     @media ${device.tablet} {
@@ -18,21 +18,28 @@ const StyledContainer = styled.div`
     }
 `
 
+const StyledWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
 export default function ProjectGallery(props) {
     return (
-        <StyledContainer>
-            {props.projects.map( project => {
-                if (props.activeFilterTags.length <= 0 || compareTags(props.activeFilterTags, project.tags)) {
-                    return (
-                        <ProjectCard
-                            key={project.id}
-                            project={project}
-                            categorySlug={props.categorySlug}
-                            categoryID={props.categoryID}
-                        />
-                    )
-                }
-            })}
-        </StyledContainer>
+        <StyledWrapper>
+            <StyledContainer>
+                {props.projects.map( project => {
+                    if (props.activeFilterTags.length <= 0 || compareTags(props.activeFilterTags, project.tags)) {
+                        return (
+                            <ProjectCard
+                                key={project.id}
+                                project={project}
+                                categorySlug={props.categorySlug}
+                                categoryID={props.categoryID}
+                            />
+                        )
+                    }
+                })}
+            </StyledContainer>
+        </StyledWrapper>
     )
 }
