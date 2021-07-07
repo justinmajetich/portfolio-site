@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import ProjectDetail from 'components/elements/ProjectDetail'
 import ProjectLink from 'components/elements/ProjectLink'
 import StyledParagraph from 'components/elements/StyledParagraph'
+import ParseTextToParagraphs from 'utils/parseTextToParagraphs'
 
 const StyledDetailsWrapper = styled.div`
     margin-top: 20px;
@@ -15,9 +16,7 @@ export default function ProjectDescription(props) {
     return (
         <div>
             <h2>{props.title}</h2>
-            <StyledParagraph>
-                {props.summary}
-            </StyledParagraph>
+            {ParseTextToParagraphs(props.summary, StyledParagraph)}
             <StyledDetailsWrapper>
                 {props.details.map(detail => {
                     return (
