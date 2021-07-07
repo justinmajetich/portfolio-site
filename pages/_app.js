@@ -46,6 +46,16 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    background-color: none;
+  }
+
+  *::-webkit-scrollbar-thumb
+  {
+      background-color: lightgray;
+  }
 `
 
 function App({ Component, pageProps }) {
