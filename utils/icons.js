@@ -10,6 +10,8 @@ export const icons = {
     spotify: '/images/icons/spotify.svg',
     download: '/images/icons/download.svg',
     gallery: '/images/icons/gallery.svg',
+    website: '/images/icons/website.svg',
+    blog: '/images/icons/blog.svg',
     arrowVertical: '/images/icons/arrow-vertical.svg',
     arrowHorizontal: '/images/icons/arrow-horizontal.svg',
     arrowHorizontalShort: '/images/icons/arrow-horizontal-short.svg'
