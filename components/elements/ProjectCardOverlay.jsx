@@ -25,7 +25,7 @@ animation: ${partialFadeIn} .2s 1;
 opacity: 0.9;
 `
 
-const StyledCardHeader = styled.h2`
+const StyledCardHeader = styled.h3`
 position: absolute;
 top: 0;
 margin: 20px;
