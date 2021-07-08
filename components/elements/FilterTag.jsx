@@ -3,38 +3,56 @@ import { useState } from 'react'
 
 const grow = keyframes`
     {
-        0% { transform: scale(1); }
-        50% { transform: scale(0.9); }
-        100% { transform: scale(1); }    
+        0% { transform: scale(1); filter: blur(10px); }
+        50% { transform: scale(0.9); filter: blur(9px); }
+        100% { transform: scale(1); filter: blur(10px); }    
     }
 `
 
-const growInterpolation = css`
-    animation: ${grow} .25s 1;
+const pulse = keyframes`
+    {
+        0% { transform: scale(1); filter: blur(10px); }
+        50% { transform: scale(1.05); filter: blur(12px); }
+        100% { transform: scale(1); filter: blur(10px); }    
+    }
 `
 
-const StyledBackground = styled.div`
+const pulseInterpolation = css`
+    animation: ${grow} .25s ease-out 1, ${pulse} 2s .5s cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite;
+`
+
+const StyledContainer = styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
     min-width: 80px;
     height: 25px;
 
-    margin: 6px 16px 6px 0px;
-    padding: 0 10px;
-
-    border-radius: 5px;
-    background: ${props => props.theme[props.categoryID]};
-    opacity: ${props => props.isSelected ? '0.8' : '0.5'};
-    
-    ${props => props.isSelected ? growInterpolation : ''};
-
+    margin: 8px 20px 8px 0px;
+    padding: 0 12px;
     cursor: pointer;
+`
+
+const StyledBackground = styled.div`
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: ${props => props.theme[props.categoryID]};
+    opacity: ${props => props.isSelected ? '1' : '0.6'};
+    
+    /* ${props => props.isSelected ? growInterpolation : ''}; */
+    filter: blur(10px);
+
+    ${props => props.isSelected ? pulseInterpolation : ''}
+    /* animation: ${pulse} 2s cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite; */
 `
 
 const StyledText = styled.p`
     font-size: 0.8em;
+    /* color: ${props => props.theme.darkGray}; */
     color: black;
     margin: 0;
 `
@@ -49,16 +67,18 @@ export default function FilterTag(props) {
     }
 
     return (
-        <StyledBackground
+        <StyledContainer
             onClick={handleClick}
-            isSelected={isSelected}
-            categoryID={props.categoryID}
         >
+            <StyledBackground
+                isSelected={isSelected}
+                categoryID={props.categoryID}
+            />
             <StyledText
                 isSelected={isSelected}
             >
                 {props.tag.name}
             </StyledText>
-        </StyledBackground>
+        </StyledContainer>
     )
 }
