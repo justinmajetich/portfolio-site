@@ -8,6 +8,7 @@ export const icons = {
     youtube: '/images/icons/youtube.svg',
     linkedin: '/images/icons/linkedin.svg',
     spotify: '/images/icons/spotify.svg',
+    bandcamp: '/images/icons/bandcamp.svg',
     download: '/images/icons/download.svg',
     gallery: '/images/icons/gallery.svg',
     website: '/images/icons/website.svg',
