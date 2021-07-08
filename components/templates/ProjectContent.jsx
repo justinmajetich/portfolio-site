@@ -16,17 +16,6 @@ const StyledContainer = styled.div`
     max-width: 720px;
 `
 
-const StyledHeadingWrapper = styled.div`
-    display: flex;
-    align-items: center;
-`
-
-const StyledIconWrapper = styled.div`
-    width: 14px;
-    height: 14px;
-    margin-right: 10px;
-`
-
 export default function ProjectContent({ content }) {
     return (
         <ContentContainer
@@ -44,13 +33,15 @@ export default function ProjectContent({ content }) {
                 />
                 <ProjectFeaturedMedia media={content.featured_media}/>
                 {content.process_sections.map(section => <ProcessSection key={section.id} content={section} />)}
-                <StyledHeadingWrapper>
-                    <StyledIconWrapper><Icon type={'gallery'}/></StyledIconWrapper>
-                    <h2>Gallery</h2>
-                </StyledHeadingWrapper>
-                <MediaGallery
-                    media={content.gallery_media}
-                />
+                {content.gallery_media.length != 0 ?
+                    <>
+                        <h2>Gallery</h2>
+                        <MediaGallery
+                            media={content.gallery_media}
+                        />
+                    </>
+                : null
+                }
             </StyledContainer>
 
         </ContentContainer>
