@@ -14,7 +14,7 @@ const StyledWrapper = styled.div`
 
     cursor: pointer;
 
-    @media ${device.laptop} {
+    @media ${device.tablet} {
         margin: 20px ;
     }
 `

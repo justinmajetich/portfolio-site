@@ -7,13 +7,14 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    /* align-items: center; */
+    justify-content: center;
 
-    width: 680px;
+    width: 340px;
     margin: 10px 0px 40px 0px;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
+        justify-content: flex-start;
+        width: 680px;
         margin: 20px 0px 40px 0px;
     }
 `
