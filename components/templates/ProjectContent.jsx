@@ -31,7 +31,7 @@ export default function ProjectContent({ content }) {
                     details={content.details}
                     links={content.links}
                 />
-                <ProjectFeaturedMedia media={content.featured_media}/>
+                {content.featured_media ? <ProjectFeaturedMedia media={content.featured_media}/> : null}
                 {content.process_sections.map(section => <ProcessSection key={section.id} content={section} />)}
                 {content.gallery_media.length != 0 ?
                     <>
