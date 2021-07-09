@@ -29,7 +29,7 @@ const StyledContainer = styled.div`
     min-width: 80px;
     height: 25px;
 
-    margin: 8px 20px 8px 0px;
+    margin: 8px 10px 8px 10px;
     padding: 0 12px;
     cursor: pointer;
 `

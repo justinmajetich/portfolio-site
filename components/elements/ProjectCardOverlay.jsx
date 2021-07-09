@@ -29,7 +29,7 @@ const StyledCardHeader = styled.h3`
 position: absolute;
 top: 0;
 margin: 20px;
-color: white;
+color: blue;
 animation: ${fadeIn} .2s 1;
 `
 
@@ -39,7 +39,7 @@ bottom: 0;
 margin: 20px;
 font-size: 1.1em;
 font-weight: 500;
-color: white;
+color: blue;
 animation: ${fadeIn} .2s 1;
 `
 
