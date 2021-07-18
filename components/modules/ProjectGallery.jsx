@@ -10,12 +10,15 @@ const StyledContainer = styled.div`
     justify-content: center;
 
     width: 340px;
-    margin: 10px 0px 40px 0px;
+    margin: 40px 0px 60px 0px;
 
     @media ${device.laptop} {
         justify-content: flex-start;
         width: 680px;
-        margin: 20px 0px 40px 0px;
+    }
+
+    @media ${device.laptopL} {
+        width: 1020px;
     }
 `
 

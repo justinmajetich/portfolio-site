@@ -11,12 +11,20 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 720px;
 
     @media ${device.tablet} {
         margin-top: 100px;
     }
+`
+
+const StyledWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 720px;
 `
 
 const StyledSummary = styled(StyledParagraph)`
@@ -43,13 +51,15 @@ export default function CategoryContent(props) {
             categoryID={props.content.id}
         >
             <StyledContainer>
-                <h1>{props.content.title}</h1>
-                {parseTextToParagraphs(props.content.summary, StyledSummary)}
-                <ProjectsFilter
-                    tags={props.content.tags}
-                    setFilterTagActivity={setFilterTagActivity}
-                    categoryID={props.content.id}
-                />
+                <StyledWrapper>
+                    <h1>{props.content.title}</h1>
+                    {parseTextToParagraphs(props.content.summary, StyledSummary)}
+                    <ProjectsFilter
+                        tags={props.content.tags}
+                        setFilterTagActivity={setFilterTagActivity}
+                        categoryID={props.content.id}
+                    />
+                </StyledWrapper>
                 <ProjectGallery
                     projects={props.content.projects}
                     activeFilterTags={activeFilterTags}
