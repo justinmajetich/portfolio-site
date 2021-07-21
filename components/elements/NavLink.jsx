@@ -16,7 +16,7 @@ const StyledContainer = styled.div`
     position: relative;
     transform: scale(1);
 
-    transition: .25s ease;
+    transition: .15s ease;
 
     :hover {
         transform: scale(1.05);
@@ -24,8 +24,10 @@ const StyledContainer = styled.div`
 `
 
 const StyledNavText = styled.p`
+    font-family: 'Gotu', Helvetica Neue, sans-serif;
+    /* font-weight: 600; */
     font-size: 1.5em;
-    font-weight: ${props => props.isCurrentPage ? '700' : '400'};
+    font-weight: ${props => props.isCurrentPage ? '600' : '500'};
     white-space: nowrap;
     cursor: pointer;
     margin: 0;
