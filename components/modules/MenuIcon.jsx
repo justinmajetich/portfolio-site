@@ -30,8 +30,7 @@ export default function MenuIcon(props) {
             animationData: animationData,
         });
 
-        anim.current.setSpeed(1.2)
-        console.log('USE EFFECT')
+        anim.current.setSpeed(1.25)
 
         return () => anim.current.destroy()
     
@@ -40,9 +39,9 @@ export default function MenuIcon(props) {
     const handleClick = () => {
 
         if (props.menuIsActive) {
-            anim.current.playSegments([65, 0], true)
+            anim.current.playSegments([55, 0], true)
         } else {
-            anim.current.playSegments([25, 90], true)
+            anim.current.playSegments([30, 90], true)
         }
 
         props.setMenuIsActive(!props.menuIsActive)
