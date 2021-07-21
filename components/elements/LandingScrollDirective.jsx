@@ -19,7 +19,7 @@ const StyledScrollDirective = styled.div`
 
 const StyledArrowWrapper = styled.div`
     position: absolute;
-    bottom: 70px;
+    bottom: 80px;
     right: 0;
     display: flex;
     align-items: flex-start;
