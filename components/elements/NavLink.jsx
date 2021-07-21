@@ -1,10 +1,14 @@
 import styled, { keyframes } from 'styled-components'
 import Link from 'next/link'
 import Icon from 'components/elements/Icon'
-import { fadeIn } from 'utils/animations'
 
 const slideLeft = keyframes`
     from { transform: translateX(60px); opacity: 0;}
+    to { transform: translateX(0px); opacity: 1;}
+`
+
+const arrowSlide = keyframes`
+    from { transform: translateX(-15px); opacity: 0;}
     to { transform: translateX(0px); opacity: 1;}
 `
 
@@ -43,7 +47,7 @@ const StyledArrowContainer = styled.div`
 const StyledArrowWrapper = styled.div`
     width: 22px;
     height: 24px;
-    animation: ${fadeIn} .25s 1;
+    animation: ${arrowSlide} .25s 1;
 `
 
 export default function NavLink(props) {
