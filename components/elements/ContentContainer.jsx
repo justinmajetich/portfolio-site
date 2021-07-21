@@ -8,7 +8,7 @@ const StyledContentContainer = styled.div`
     width: 100%;
     height: 100%;
     
-    padding: 0 10%;
+    padding: 20px 10%;
 
     * ::selection {
         background: ${props => props.categoryID ? props.theme[props.categoryID.toString()] : ''};
