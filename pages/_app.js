@@ -5,6 +5,7 @@ const theme = {
   2: '#DB9BF1',
   3: '#FFE486',
   darkGray: '#606060',
+  mediumGray: '#CDCDCD',
   lightGray: '#F0F0F0'
 }
 
@@ -16,6 +17,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Gotu', Helvetica Neue, sans-serif;
+    font-weight: 600;
+    line-height: 140%;
   }
 
   h1 {
@@ -49,12 +56,12 @@ const GlobalStyle = createGlobalStyle`
 
   *::-webkit-scrollbar {
     width: 8px;
-    background-color: none;
+    background-color: ${theme.lightGray};
   }
 
   *::-webkit-scrollbar-thumb
   {
-      background-color: lightgray;
+      background-color: ${theme.mediumGray};
   }
 `
 
