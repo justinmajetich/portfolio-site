@@ -13,8 +13,10 @@ export default function ProjectLayout({ content }) {
             <Header
                 pageID={content.categories[0].id}
                 categoryID={content.categories[0].id}
+                category={content.categories[0]}
                 menuIsActive={menuIsActive}
                 setMenuIsActive={setMenuIsActive}
+                isProjectPage
             />
             {!menuIsActive ?
                 <ProjectContent content={content}/>
