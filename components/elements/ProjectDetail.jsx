@@ -11,7 +11,7 @@ const StyledDetailContent = styled.p`
 `
 
 const StyledDetailTitle = styled(StyledDetailContent)`
-    font-weight: 500;
+    /* font-weight: 500; */
     color: black;
 `
 
