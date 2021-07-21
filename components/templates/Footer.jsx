@@ -22,7 +22,7 @@ const StyledCopyright = styled.p`
 export default function Footer() {
     return (
         <StyledContainer>
-            <StyledCopyright>2021 © Justin Majetich</StyledCopyright>
+            <StyledCopyright>{'2021 © Created by Justin Majetich'}</StyledCopyright>
         </StyledContainer>
     )
 }
