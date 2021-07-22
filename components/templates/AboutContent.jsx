@@ -36,12 +36,9 @@ const StyledDescriptionText = styled(StyledParagraph)`
     font-size: 1.1em;
 `
 
-const StyledRowWrapper = styled.div`
-
-`
-
 const StyledLinkText = styled.span`
     color: blue;
+    cursor: pointer;
 `
 
 const StyledButtonWrapper = styled.div`
@@ -81,7 +78,7 @@ export default function AboutContent({ content }) {
                     </StyledDescriptionText>
                     
                     <StyledButtonWrapper>
-                        <ResumeButton url={'content.resume_url'}/>
+                        <ResumeButton url={content.resume_url}/>
                     </StyledButtonWrapper>                        
                     <StyledSocialsWrapper>
                         <Socials />

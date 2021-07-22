@@ -7,8 +7,7 @@ const StyledContainer = styled.div`
     align-items: center;
     width: 160px;
     height: 50px;
-    border: 3px solid black;
-    border-radius: 2px;
+    border: 2px solid black;
     cursor: pointer;
     transition: background-color .25s;
 
@@ -20,12 +19,13 @@ const StyledContainer = styled.div`
 
 const StyledText = styled.h3`
     font-size: 1.1em;
+    font-weight: 500;
     transition: color .25s;
 `
 
-export default function ResumeButton() {
+export default function ResumeButton({ url }) {
     return (
-        <Link href={'https://drive.google.com/file/d/1MhHnNHhJvHDzx_naAs0UDFv1VWfvCItK/view?usp=sharing'}>
+        <Link href={url}>
             <StyledContainer>
                 <StyledText>{'View Resume'}</StyledText>
             </StyledContainer>
