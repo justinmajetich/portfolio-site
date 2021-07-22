@@ -1,12 +1,14 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
+// Top font choices: Laila, Work Sans, Roboto, Signika
 const theme = {
   1: '#66E1A6',
   2: '#DB9BF1',
   3: '#FFE486',
   darkGray: '#606060',
   mediumGray: '#CDCDCD',
-  lightGray: '#F0F0F0'
+  lightGray: '#F0F0F0',
+  headerFont: 'Roboto'
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -20,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3 {
-    font-family: 'Gotu', Helvetica Neue, sans-serif;
+    font-family: ${theme.headerFont}, Helvetica Neue, sans-serif;
     font-weight: 600;
     line-height: 140%;
   }

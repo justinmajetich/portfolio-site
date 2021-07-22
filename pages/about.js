@@ -1,15 +1,17 @@
 import Head from 'next/head'
+import { withTheme } from 'styled-components'
 import { apiURL } from 'config/apiURL'
 import AboutLayout from 'components/layouts/AboutLayout'
+import GetGoogleFontsURL from 'utils/getGoogleFontsURL'
 
-export default function About({ content }) {
+function About({ content, theme}) {
   return (
     <>
         <Head>
             <title>Justin Majetich</title>
             <meta name="description" content="Justin Majetich's portfolio site" />
             <link rel="icon" href="/favicon.ico" />
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Laila&family=Gotu&family=Yatra+One"></link>
+            <link rel="stylesheet" href={GetGoogleFontsURL(theme.headerFont)}></link>
         </Head>
         <AboutLayout content={content}/>
     </>
@@ -29,3 +31,5 @@ export async function getStaticProps() {
     revalidate: 60,
   }
 }
+
+export default withTheme(About)

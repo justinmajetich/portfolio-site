@@ -1,15 +1,17 @@
-import ProjectLayout from 'components/layouts/ProjectLayout'
+import { withTheme } from 'styled-components'
 import Head from 'next/head'
+import ProjectLayout from 'components/layouts/ProjectLayout'
 import { apiURL } from 'config/apiURL'
+import GetGoogleFontsURL from 'utils/getGoogleFontsURL'
 
-export default function Project({ content }) {
+function Project({ content, theme}) {
   return (
     <>
       <Head>
         <title>Justin Majetich</title>
         <meta name="description" content="Justin Majetich's portfolio site" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Laila&family=Gotu&family=Yatra+One"></link>
+        <link rel="stylesheet" href={GetGoogleFontsURL(theme.headerFont)}></link>
       </Head>
       <ProjectLayout content={content}/>
     </>
@@ -49,3 +51,5 @@ export async function getStaticPaths() {
     revalidate: 60,
   }
 }
+
+export default withTheme(Project)
