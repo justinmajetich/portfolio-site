@@ -81,7 +81,7 @@ export default function AboutContent({ content }) {
                     </StyledDescriptionText>
                     
                     <StyledButtonWrapper>
-                        <ResumeButton />
+                        <ResumeButton url={'content.resume_url'}/>
                     </StyledButtonWrapper>                        
                     <StyledSocialsWrapper>
                         <Socials />

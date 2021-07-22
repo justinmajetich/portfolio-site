@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const StyledContainer = styled.div`
     display: flex;
@@ -24,8 +25,10 @@ const StyledText = styled.h3`
 
 export default function ResumeButton() {
     return (
-        <StyledContainer>
-            <StyledText>{'View Resume'}</StyledText>
-        </StyledContainer>
+        <Link href={'https://drive.google.com/file/d/1MhHnNHhJvHDzx_naAs0UDFv1VWfvCItK/view?usp=sharing'}>
+            <StyledContainer>
+                <StyledText>{'View Resume'}</StyledText>
+            </StyledContainer>
+        </Link>
     )
 }
