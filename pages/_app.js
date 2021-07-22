@@ -1,6 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
-// Top font choices: Laila, Work Sans, Roboto, Signika
+// My top font choices: Laila, Work Sans, Roboto, Signika, Assistant, Lato, Barlow, Source Sans Pro
 const theme = {
   1: '#66E1A6',
   2: '#DB9BF1',
@@ -8,7 +8,7 @@ const theme = {
   darkGray: '#606060',
   mediumGray: '#CDCDCD',
   lightGray: '#F0F0F0',
-  headerFont: 'Roboto'
+  headerFont: 'Lato'
 }
 
 const GlobalStyle = createGlobalStyle`
