@@ -37,8 +37,8 @@ export default function LandingContent(props) {
 
     const navData = [
         {title: 'Code', description: 'Games, XR & web', sectionID: 'code', categoryID: 1},
-        {title: 'Film', description: 'Design, direction & props', sectionID: 'film', categoryID: 2},
-        {title: 'Music', description: 'Songwriting, scores & video', sectionID: 'music', categoryID: 3}
+        {title: 'Film', description: 'Direction, design & styling', sectionID: 'film', categoryID: 2},
+        {title: 'Music', description: 'Songwriting & scores', sectionID: 'music', categoryID: 3}
     ]
 
     return (
