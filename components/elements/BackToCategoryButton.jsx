@@ -17,7 +17,6 @@ const StyledArrowWrapper = styled.div`
 
 const StyledText = styled.p`
     font-size: 1em;
-    font-weight: 500;
     margin-left: 10px;
     color: black;
 `
