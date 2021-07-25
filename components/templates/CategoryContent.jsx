@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
     width: 100%;
 
     @media ${device.tablet} {
-        margin-top: 100px;
+        margin-top: 60px;
     }
 `
 

@@ -12,7 +12,7 @@ const StyledTagsContainer = styled.div`
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    margin-top: 40px;
+    margin-top: 20px;
 `
 
 export default function ProjectsFilter(props) {
