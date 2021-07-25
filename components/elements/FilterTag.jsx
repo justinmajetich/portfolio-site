@@ -1,24 +1,17 @@
 import styled, { keyframes, css } from 'styled-components'
 import { useState } from 'react'
+import { device } from 'utils/media-breakpoints'
 
-const grow = keyframes`
+const selectEffect = keyframes`
     {
-        0% { transform: scale(1); filter: blur(10px); }
-        50% { transform: scale(0.9); filter: blur(9px); }
-        100% { transform: scale(1); filter: blur(10px); }    
+        0% { transform: scale(1); }
+        50% { transform: scale(0.9); }
+        100% { transform: scale(1); }    
     }
 `
 
-const pulse = keyframes`
-    {
-        0% { transform: scale(1); filter: blur(10px); }
-        50% { transform: scale(1.05); filter: blur(12px); }
-        100% { transform: scale(1); filter: blur(10px); }    
-    }
-`
-
-const pulseInterpolation = css`
-    animation: ${grow} .25s ease-out 1, ${pulse} 2s .5s cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite;
+const selectAnimation = css`
+    animation: ${selectEffect} .25s cubic-bezier(0.42, 0.0, 0.58, 1.0) 1;
 `
 
 const StyledContainer = styled.div`
@@ -29,9 +22,14 @@ const StyledContainer = styled.div`
     min-width: 80px;
     height: 25px;
 
-    margin: 8px 10px 8px 10px;
+    margin: 8px 20px 8px 0px;
     padding: 0 12px;
     cursor: pointer;
+
+        
+    @media ${device.tablet} {
+        margin: 8px 10px 8px 10px;
+    }
 `
 
 const StyledBackground = styled.div`
@@ -39,20 +37,15 @@ const StyledBackground = styled.div`
     z-index: -1;
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: 4px;
     background: ${props => props.theme[props.categoryID]};
-    opacity: ${props => props.isSelected ? '1' : '0.6'};
-    
-    /* ${props => props.isSelected ? growInterpolation : ''}; */
-    filter: blur(10px);
-
-    ${props => props.isSelected ? pulseInterpolation : ''}
-    /* animation: ${pulse} 2s cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite; */
+    opacity: ${props => props.isSelected ? '1' : '0.3'};
+    ${props => props.isSelected ? selectAnimation : ''};
+    transition: .25s;
 `
 
 const StyledText = styled.p`
     font-size: 0.8em;
-    /* color: ${props => props.theme.darkGray}; */
     color: black;
     margin: 0;
 `
