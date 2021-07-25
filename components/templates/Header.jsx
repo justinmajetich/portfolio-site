@@ -33,7 +33,14 @@ export default function Header(props) {
 
     const handleScrollPosition = () => { setScrollPosition(window.scrollY) }
 
-    useEffect(() => { window.addEventListener('scroll', handleScrollPosition) }, []);
+    useEffect(() => {
+
+        if (props.isProjectPage) {
+            window.addEventListener('scroll', handleScrollPosition)
+            return () => window.removeEventListener('scroll', handleScrollPosition)
+        }
+
+    }, [scrollPosition]);
 
     return (
         <StyledContainer
