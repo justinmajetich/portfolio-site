@@ -24,7 +24,8 @@ const StyledContainer = styled.div`
 `
 
 const StyledNavText = styled.p`
-    font-family: ${props => props.theme.headerFont}, Helvetica Neue, sans-serif;
+    /* font-family: ${props => props.theme.headerFont}, Helvetica Neue, sans-serif; */
+    font-family: Helvetica Neue, sans-serif;
     font-size: 1.5em;
     font-weight: ${props => props.isCurrentPage ? '600' : '500'};
     white-space: nowrap;
