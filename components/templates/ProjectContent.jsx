@@ -5,7 +5,6 @@ import ProjectDescription from "components/modules/ProjectDescription"
 import MediaGallery from 'components/modules/MediaGallery'
 import ProcessSection from 'components/modules/ProcessSection'
 import ProjectFeaturedMedia from 'components/modules/ProjectFeaturedMedia'
-import Icon from 'components/elements/Icon'
 
 
 const StyledContainer = styled.div`
@@ -30,12 +29,13 @@ export default function ProjectContent({ content }) {
                     summary={content.summary}
                     details={content.details}
                     links={content.links}
+                    tags={content.tags}
                 />
                 {content.featured_media ? <ProjectFeaturedMedia media={content.featured_media}/> : null}
                 {content.process_sections.map(section => <ProcessSection key={section.id} content={section} />)}
                 {content.gallery_media.length != 0 ?
                     <>
-                        <h2>Gallery</h2>
+                        <h3>Gallery</h3>
                         <MediaGallery
                             media={content.gallery_media}
                         />
