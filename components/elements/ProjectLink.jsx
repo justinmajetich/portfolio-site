@@ -20,8 +20,8 @@ const StyledIconWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 `
 
 export default function ProjectLink({ link }) {

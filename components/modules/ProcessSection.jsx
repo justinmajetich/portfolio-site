@@ -4,26 +4,34 @@ import Image from 'next/image'
 import ParseTextToParagraphs from 'utils/parseTextToParagraphs'
 
 const StyledContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
     margin: 20px 0;
 `
 
 const StyledImageWrapper = styled.div`
+    align-self: center;
+    max-width: 640px;
     margin: 20px 0;
 `
 
 export default function ProcessSection({ content }) {
+
+    console.log(content.media)
+
     return (
         <StyledContainer>
-            <h2>{content.header}</h2>
+            <h3>{content.header}</h3>
             {ParseTextToParagraphs(content.summary, StyledParagraph)}
-            {content.media_single ?
+            {content.media ?
                 <StyledImageWrapper>
                     <Image
-                        src={content.media_single.url}
-                        alt={content.media_single.alternativeText}
-                        width={content.media_single.width}
-                        height={content.media_single.height}
+                        src={content.media.url}
+                        alt={content.media.alternativeText}
+                        width={content.media.width}
+                        height={content.media.height}
                     />
                 </StyledImageWrapper>         
                 : null
