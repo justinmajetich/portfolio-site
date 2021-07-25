@@ -12,15 +12,16 @@ const StyledContainer = styled.div`
     transition: background-color .25s;
 
     :hover {
-        h3 { color: white; }
+        p { color: white; }
         background-color: black;
     }
 `
 
-const StyledText = styled.h3`
+const StyledText = styled.p`
     font-size: 1.1em;
     font-weight: 500;
     transition: color .25s;
+    margin: 0px;
 `
 
 export default function ResumeButton({ url }) {
