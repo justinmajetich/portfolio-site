@@ -33,16 +33,16 @@ const StyledButtonBackground = styled.div`
 
     border-radius: 60px;
 
-    background-image: linear-gradient(to ${props => props.categoryID % 2 == 0 ? 'left' : 'right'}, ${props => props.theme[props.categoryID]}, 35%, rgba(255, 255, 255, 0) 95%);
-    background-size: ${props => props.isHovered ? '200% 100%' : '80% 100%'};
+    background-image: linear-gradient(to ${props => props.categoryID % 2 == 0 ? 'left' : 'right'}, ${props => props.theme[props.categoryID]}, 50%, rgba(255, 255, 255, 0) 95%);
+    background-size: ${props => props.isHovered ? '160% 200%' : '60% 80%'};
     background-position: ${props => props.categoryID % 2 == 0 ? 'right' : 'left'};
     background-repeat: no-repeat;
 
-    filter: ${props => props.isHovered ? 'blur(35px)' : 'blur(15px)'};
+    filter: ${props => props.isHovered ? 'blur(45px)' : 'blur(15px)'};
 
-    transition: 0.5s ease-in-out;
+    transition: 0.65s ease-in-out;
 
-    animation: ${bgPulse} 2.5s ${props => props.categoryID / 3}s cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite;
+    /* animation: ${bgPulse} 2.5s ${props => props.categoryID / 3}s cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite; */
 `
 
 const StyledButtonContent = styled.div`
