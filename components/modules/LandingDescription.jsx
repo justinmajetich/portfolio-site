@@ -32,7 +32,7 @@ export default function LandingIntroduction(props) {
     return (
         <StyledContainer height={safeVH}>
             <h1>Justin Majetich</h1>
-            <StyledLandingDescription>I'm a coder, creative director, and musician encouraging play and crafting spaces for transformation.</StyledLandingDescription>
+            <StyledLandingDescription>I'm a coder, musician, and creative director encouraging play and crafting spaces for transformation.</StyledLandingDescription>
             <LandingScrollDirective />
         </StyledContainer>
     )
