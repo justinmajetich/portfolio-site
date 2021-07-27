@@ -3,7 +3,7 @@ import ProjectDetail from 'components/elements/ProjectDetail'
 import ProjectLink from 'components/elements/ProjectLink'
 import StyledParagraph from 'components/elements/StyledParagraph'
 import ParseTextToParagraphs from 'utils/parseTextToParagraphs'
-import ProjectTags from './ProjectTags'
+import ProjectTags from '../elements/ProjectTags'
 
 const StyledDetailsWrapper = styled.div`
     margin-top: 20px;
