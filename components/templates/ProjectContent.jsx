@@ -34,12 +34,9 @@ export default function ProjectContent({ content }) {
                 {content.featured_media ? <ProjectFeaturedMedia media={content.featured_media}/> : null}
                 {content.process_sections.map(section => <ProcessSection key={section.id} content={section} />)}
                 {content.gallery_media.length != 0 ?
-                    <>
-                        <h3>Gallery</h3>
-                        <MediaGallery
-                            media={content.gallery_media}
-                        />
-                    </>
+                    <MediaGallery
+                        media={content.gallery_media}
+                    />
                 : null
                 }
             </StyledContainer>
