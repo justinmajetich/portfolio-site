@@ -11,10 +11,10 @@ const StyledWrapper = styled.div`
 const StyledContainer = styled.div`
     width: 100%;
     max-width: 640px;
-    margin: 40px 0px 40px;
+    margin: 40px 0px 10px;
 
     @media ${device.tablet} {
-        margin: 80px 0px 80px;
+        margin: 60px 0px 10px;
     }
 `
 
