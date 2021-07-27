@@ -27,7 +27,7 @@ export default function ProjectTags({ tags }) {
         <StyledContainer>
             {tags.map(tag => {
                 return (
-                    <StyledTagWrapper>
+                    <StyledTagWrapper key={tag.id}>
                         <StyledText>{tag.name}</StyledText>
                     </StyledTagWrapper>
                 )
