@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Navigation from 'components/modules/Navigation'
@@ -16,8 +16,11 @@ const StyledContainer = styled.div`
     width: 100%;
     height: 50px;
     padding: 15px;
-    background-color: ${props => props.isProjectPage && props.scrollPosition > 50 ? 'rgb(255,255,255,0.9)' : 'none'};
-    transition: background-color .25s;
+    background-color: ${props => props.isProjectPage ? 'rgb(255,255,255,0.85)' : 'none'};
+    ${props => props.isProjectPage ? 'backdrop-filter: blur(3px)' : ''}
+
+    /* background-color: ${props => props.isProjectPage && props.scrollPosition > 50 ? 'rgb(255,255,255,0.9)' : 'none'}; */
+    /* transition: background-color .25s; */
 `
 
 const StyledInitials = styled.h3`
@@ -29,24 +32,24 @@ const StyledInitials = styled.h3`
 
 export default function Header(props) {
 
-    const [scrollPosition, setScrollPosition] = useState(0);
+    // const [scrollPosition, setScrollPosition] = useState(0);
 
-    const handleScrollPosition = () => { setScrollPosition(window.scrollY) }
+    // const handleScrollPosition = () => { setScrollPosition(window.scrollY) }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        if (props.isProjectPage) {
-            window.addEventListener('scroll', handleScrollPosition)
-            return () => window.removeEventListener('scroll', handleScrollPosition)
-        }
+    //     if (props.isProjectPage) {
+    //         window.addEventListener('scroll', handleScrollPosition)
+    //         return () => window.removeEventListener('scroll', handleScrollPosition)
+    //     }
 
-    }, [scrollPosition]);
+    // }, [scrollPosition]);
 
     return (
         <StyledContainer
             menuIsActive={props.menuIsActive}
             isProjectPage={props.isProjectPage}
-            scrollPosition={scrollPosition}
+            // scrollPosition={scrollPosition}
         >
             {props.menuIsActive ?
                 <Link href={'/'}>
