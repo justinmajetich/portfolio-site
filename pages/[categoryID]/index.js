@@ -5,9 +5,6 @@ import { apiURL } from 'config/apiURL'
 import GetGoogleFontsURL from 'utils/getGoogleFontsURL'
 
 function Category({ content, theme }) {
-
-  console.log(content)
-
   return (
     <>
       <Head>
