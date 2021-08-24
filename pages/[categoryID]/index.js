@@ -4,7 +4,10 @@ import CategoryLayout from 'components/layouts/CategoryLayout'
 import { apiURL } from 'config/apiURL'
 import GetGoogleFontsURL from 'utils/getGoogleFontsURL'
 
-function Category({ content, theme}) {
+function Category({ content, theme }) {
+
+  console.log(content)
+
   return (
     <>
       <Head>
@@ -34,15 +37,22 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 
-  // If the route is like '/categories/code', then params.categoryID is 'code'
-  const res = await fetch(apiURL + `categories?slug=${params.categoryID}`)
+  // Retrieve category data.
+  // If the route is like '/categories/code', then params.categoryID is 'code'.
+  const categoryRes = await fetch(apiURL + `categories?slug=${params.categoryID}`)
+  const categoryData = await categoryRes.json()
 
-  const data = await res.json()
+  // Retrieve project data filtered by category and sorted in descending (as defined by Strapi service).
+  const projectRes = await fetch(apiURL + `projects?categories.slug=${params.categoryID}`)
+  const projectData = await projectRes.json()
+
+  // Replace category data's 'projects' field with sorted project data.
+  categoryData[0].projects = projectData
 
   return { 
     props: {
-      key: data[0].id,
-      content: data[0]
+      key: categoryData[0].id,
+      content: categoryData[0]
     },
     revalidate: 60,
   }
