@@ -5,8 +5,6 @@ import StyledParagraph from 'components/elements/StyledParagraph'
 import LandingScrollDirective from 'components/elements/LandingScrollDirective'
 
 
-const landingDescriptionText = 'I\'m a developer and designer encouraging play and making spaces for transformation.'
-
 const StyledContainer = styled.div`
     position: relative;
     display: flex;
@@ -26,15 +24,17 @@ const StyledLandingDescription = styled(StyledParagraph)`
     max-width: 560px;
 `
 
-export default function LandingIntroduction(props) {
+export default function LandingIntroduction({ content }) {
+
+    console.log(content)
 
     const vh = use100vh()
     const safeVH = vh ? vh : 720
 
     return (
         <StyledContainer height={safeVH}>
-            <h2>Justin Majetich</h2>
-            <StyledLandingDescription>{landingDescriptionText}</StyledLandingDescription>
+            <h2>{content.header}</h2>
+            <StyledLandingDescription>{content.description}</StyledLandingDescription>
             <LandingScrollDirective />
         </StyledContainer>
     )

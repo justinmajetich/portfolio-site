@@ -5,7 +5,7 @@ import Header from 'components/templates/Header'
 import Footer from 'components/templates/Footer'
 import LandingContent from 'components/templates/LandingContent'
 
-export default function LandingLayout() {
+export default function LandingLayout({ content }) {
 
     const [menuIsActive, setMenuIsActive] = useState(false)
 
@@ -17,7 +17,7 @@ export default function LandingLayout() {
                 setMenuIsActive={setMenuIsActive}
             />
             {!menuIsActive ?
-                <LandingContent />
+                <LandingContent content={content}/>
             : null}
             <Footer />
         </PageContainer>

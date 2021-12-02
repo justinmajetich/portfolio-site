@@ -33,7 +33,7 @@ const StlyedIDAnchor = styled.div`
     top: -50px;
 `
 
-export default function LandingContent(props) {
+export default function LandingContent({ content }) {
 
     const navData = [
         {title: 'Code', description: 'Games, XR & web', sectionID: 'code', categoryID: 1},
@@ -44,7 +44,7 @@ export default function LandingContent(props) {
     return (
         <ContentContainer>
             <StyledContainer>
-                <LandingDescription />
+                <LandingDescription content={content}/>
                 <StyledNavContainer>
                     <StlyedIDAnchor id={'work'}/>
                     {navData.map( (nav, i) => {
