@@ -41,7 +41,7 @@ export default function CategoryContent(props) {
             setActiveFilterTags([...activeFilterTags, filter])
         } else {
             // Remove this filter from the activeFilterTags array.
-            activeFilterTags.splice(activeFilterTags.indexOf(filter))
+            activeFilterTags.splice(activeFilterTags.indexOf(filter), 1)
             setActiveFilterTags([...activeFilterTags])
         }
     }
