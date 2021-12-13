@@ -1,9 +1,9 @@
 import styled from 'styled-components'
+import { device } from 'utils/media-breakpoints'
 
 const StyledParagraph = styled.p`
-    font-size: 1em;
+    font-size: 1.4em;
     margin: 10px 0;
-    /* line-height: 150%; */
 `
 
 export default StyledParagraph

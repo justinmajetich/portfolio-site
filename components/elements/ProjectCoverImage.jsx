@@ -6,6 +6,7 @@ const StyledBannerWrapper = styled.div`
     top: 0px;
 
     width: 100%;
+    max-width: 720px;
     height: 300px;
     margin-bottom: 20px;
     

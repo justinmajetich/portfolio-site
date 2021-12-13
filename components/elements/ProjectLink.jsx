@@ -11,9 +11,9 @@ const StyledContainer = styled.div`
     cursor: pointer;
 `
 
-const StyledLinkDescription = styled(StyledParagraph)`
+const StyledLinkDescription = styled.p`
     margin: 0 10px;
-    color: blue;
+    color: ${props => props.theme.violet};
 `
 
 const StyledIconWrapper = styled.div`
