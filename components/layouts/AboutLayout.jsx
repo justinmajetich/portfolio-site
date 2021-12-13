@@ -10,10 +10,6 @@ const StyledPageBackground = styled.div`
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-image: url('/images/backgrounds/about-gradient-1.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 `
 
 export default function AboutLayout({ content }) {
@@ -22,15 +18,17 @@ export default function AboutLayout({ content }) {
     return (
         <PageContainer>
             <Header
-                pageID={4}
+                pageID={2}
                 menuIsActive={menuIsActive}
                 setMenuIsActive={setMenuIsActive}
             />
             <StyledPageBackground />
             {!menuIsActive ?
-                <AboutContent content={content}/>
+                <>
+                    <AboutContent content={content}/>
+                    <Footer />
+                </>
             : null}
-            <Footer />
         </PageContainer>
     )
 }

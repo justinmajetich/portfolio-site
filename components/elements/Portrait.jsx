@@ -5,9 +5,10 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 350px;
+    min-width: 300px;
+    max-width: 400px;
     height: 100%;
-    margin-top: 18px;
+    margin-top: 15px;
 `
 
 export default function Portrait({ portrait }) {
