@@ -1,8 +1,9 @@
 import styled, { keyframes } from 'styled-components'
 import Link from 'next/link'
+import { selectEffect } from 'components/elements/FilterTag'
 import Icon from 'components/elements/Icon'
 
-const slideLeft = keyframes`
+export const slideLeft = keyframes`
     from { transform: translateX(60px); opacity: 0;}
     to { transform: translateX(0px); opacity: 1;}
 `
@@ -14,20 +15,16 @@ const arrowSlide = keyframes`
 
 const StyledContainer = styled.div`
     position: relative;
-    transform: scale(1);
-
-    transition: .15s ease;
 
     :hover {
-        transform: scale(1.05);
+        animation: ${selectEffect} .25s cubic-bezier(0.42, 0.0, 0.58, 1.0) 1;
     }
 `
 
-const StyledNavText = styled.p`
-    /* font-family: ${props => props.theme.headerFont}, Helvetica Neue, sans-serif; */
-    font-family: Helvetica Neue, sans-serif;
-    font-size: 1.5em;
+const StyledNavText = styled.h2`
+    font-family: ${props => props.theme.headerFont}, Helvetica Neue, sans-serif;
     font-weight: ${props => props.isCurrentPage ? '600' : '500'};
+    color: ${props => props.isCurrentPage ? props.theme.violet : 'black'};
     white-space: nowrap;
     cursor: pointer;
     margin: 0;
@@ -83,13 +80,13 @@ export default function NavLink(props) {
                 >
                     {props.text}
                 </StyledNavText>
-                {showArrow() ? 
+                {/* {showArrow() ? 
                     <StyledArrowContainer>
                         <StyledArrowWrapper>
                             <Icon type={'arrowHorizontalShort'}/>
                         </StyledArrowWrapper>
                     </StyledArrowContainer>
-                : null}
+                : null} */}
             </StyledContainer>
         </Link>
     )
