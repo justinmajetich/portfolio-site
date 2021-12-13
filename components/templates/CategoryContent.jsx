@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
 
     @media ${device.tablet} {
         margin-top: 60px;
@@ -24,12 +24,11 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: 720px;
+    max-width: 980px;
 `
 
 const StyledSummary = styled(StyledParagraph)`
-    font-size: 1.2em;
-    color: ${props => props.theme.darkGray};
+    /* color: ${props => props.theme.darkGray}; */
 `
 
 export default function CategoryContent(props) {

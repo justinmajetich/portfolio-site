@@ -9,6 +9,7 @@ const StyledContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    max-width: 720px;
 `
 
 const StyledImageWrapper = styled.div`
@@ -24,7 +25,7 @@ const StyledImageWrapper = styled.div`
     }
 `
 
-const StyledHeader = styled.h3`
+const StyledHeader = styled.h2`
     margin-top: 30px;
 
     @media ${device.tablet} {

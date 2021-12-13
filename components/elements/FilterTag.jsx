@@ -2,7 +2,7 @@ import styled, { keyframes, css } from 'styled-components'
 import { useState } from 'react'
 import { device } from 'utils/media-breakpoints'
 
-const selectEffect = keyframes`
+export const selectEffect = keyframes`
     {
         0% { transform: scale(1); }
         50% { transform: scale(0.9); }
@@ -20,12 +20,10 @@ const StyledContainer = styled.div`
     justify-content: center;
     align-items: center;
     min-width: 80px;
-    height: 25px;
-
+    min-height: 25px;
     margin: 8px 20px 8px 0px;
     padding: 0 12px;
     cursor: pointer;
-
         
     @media ${device.tablet} {
         margin: 8px 10px 8px 10px;
@@ -37,17 +35,19 @@ const StyledBackground = styled.div`
     z-index: -1;
     width: 100%;
     height: 100%;
-    border-radius: 4px;
-    background: ${props => props.theme[props.categoryID]};
-    opacity: ${props => props.isSelected ? '1' : '0.3'};
+    border: 2px solid ${props => props.theme.violet};
+    border-radius: 6px;
+    background-color: ${props => props.isSelected ? props.theme.violet : 'white'};
     ${props => props.isSelected ? selectAnimation : ''};
     transition: .25s;
 `
 
 const StyledText = styled.p`
-    font-size: 0.8em;
-    color: black;
-    margin: 0;
+    font-family: ${props => props.theme.headerFont}, Helvetica Neue, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: ${props => props.isSelected ? 'white' : props.theme.violet};
+    margin: 5px 5px 5px 5px;
 `
 
 export default function FilterTag(props) {

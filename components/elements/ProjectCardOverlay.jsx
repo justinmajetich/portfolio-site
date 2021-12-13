@@ -20,7 +20,7 @@ line-height: 1.4;
 const StyledOverlayBackground = styled.div`
 width: 100%;
 height: 100%;
-background: ${props => props.theme[props.categoryID.toString()]};
+background: ${props => props.theme.paleLavender};
 animation: ${partialFadeIn} .2s 1;
 opacity: 0.9;
 `
@@ -29,7 +29,7 @@ const StyledCardHeader = styled.h3`
 position: absolute;
 top: 0;
 margin: 20px;
-color: blue;
+color: ${props => props.theme.violet};
 animation: ${fadeIn} .2s 1;
 `
 
@@ -39,7 +39,7 @@ bottom: 0;
 margin: 20px;
 font-size: 1.1em;
 font-weight: 500;
-color: blue;
+color: ${props => props.theme.violet};
 animation: ${fadeIn} .2s 1;
 `
 
@@ -57,10 +57,10 @@ export default function ProjectCardOverlay(props) {
     return (
         <Link href={'/' + props.categorySlug + '/' + props.slug}>
             <StyledHoverOverlay>
-                <StyledOverlayBackground categoryID={props.categoryID}/>
+                <StyledOverlayBackground/>
                 <StyledCardHeader>{props.title}</StyledCardHeader>
-                <StyledText>{'See Project'}</StyledText>
-                <StyledArrowWrapper><Icon type={'arrowHorizontalShort'}/></StyledArrowWrapper>
+                <StyledText>{'View Project'}</StyledText>
+                {/* <StyledArrowWrapper><Icon type={'arrowHorizontalShort'}/></StyledArrowWrapper> */}
             </StyledHoverOverlay>
         </Link>
     )

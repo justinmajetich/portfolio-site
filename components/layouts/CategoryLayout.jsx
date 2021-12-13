@@ -8,21 +8,22 @@ import CategoryContent from 'components/templates/CategoryContent'
 export default function CategoryLayout({ content }) {
 
     const [menuIsActive, setMenuIsActive] = useState(false)
-
     return (
         <PageContainer>
             <Header
-                pageID={content.id}
+                pageID={1}
                 categoryID={content.id}
                 menuIsActive={menuIsActive}
                 setMenuIsActive={setMenuIsActive}
             />
             {!menuIsActive ?
-                <CategoryContent
-                    content={content}
-                />
+                <>
+                    <CategoryContent
+                        content={content}
+                    />
+                    <Footer />
+                </>
             : null}
-            <Footer />
         </PageContainer>
     )
 }
