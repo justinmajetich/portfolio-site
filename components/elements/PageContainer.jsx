@@ -9,7 +9,7 @@ const StyledPageContainer = styled.div`
     height: 100%;
     min-height: 100vh;
 
-    padding-bottom: 50px;
+    padding-bottom: 350px;
 
     animation: ${fadeIn} 0.25s;
 `

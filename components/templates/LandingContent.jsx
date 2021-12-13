@@ -1,64 +1,35 @@
 import styled from 'styled-components'
 import ContentContainer from 'components/elements/ContentContainer'
 import LandingDescription from 'components/modules/LandingDescription'
-import CategoryNavButton from 'components/elements/CategoryNavButton'
 import { device } from 'utils/media-breakpoints'
+import FeaturedProject from 'components/modules/FeaturedProject'
 
 const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    width: 100%;
-
-    @media ${device.laptop} {
-        flex-direction: row;
-        margin-top: 5vh;
-    }
+    width: 80%;
 `
 
-const StyledNavContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-    max-width: 350px;
-    margin-top: 80px;
-`
-
-const StlyedIDAnchor = styled.div`
-    position: relative;
-    top: -50px;
+const StyledProjectsContainer = styled.div`
 `
 
 export default function LandingContent({ content }) {
-
-    const navData = [
-        {title: 'Code', description: 'Games, XR & web', sectionID: 'code', categoryID: 1},
-        {title: 'Film', description: 'Direction, design & styling', sectionID: 'film', categoryID: 2},
-        {title: 'Music', description: 'Songwriting & scores', sectionID: 'music', categoryID: 3}
-    ]
-
     return (
         <ContentContainer>
             <StyledContainer>
                 <LandingDescription content={content}/>
-                <StyledNavContainer>
-                    <StlyedIDAnchor id={'work'}/>
-                    {navData.map( (nav, i) => {
+                <StyledProjectsContainer>
+                    {content.projects.map( (project, i) => {
                         return (
-                            <CategoryNavButton
+                            <FeaturedProject
                                 key={i}
-                                title={nav.title}
-                                description={nav.description}
-                                sectionID={nav.sectionID}
-                                categoryID={nav.categoryID}
+                                project={project}
                             />
                         )
                     })}
-                </StyledNavContainer>
+                </StyledProjectsContainer>
             </StyledContainer>
         </ContentContainer>
     )

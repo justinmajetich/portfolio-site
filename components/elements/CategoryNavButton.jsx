@@ -33,9 +33,9 @@ const StyledButtonBackground = styled.div`
 
     border-radius: 60px;
 
-    background-image: linear-gradient(to ${props => props.categoryID % 2 == 0 ? 'left' : 'right'}, ${props => props.theme[props.categoryID]}, 50%, rgba(255, 255, 255, 0) 95%);
+    background-image: linear-gradient(to ${props => props.categoryID % 2 == 0 ? 'right' : 'right'}, ${props => props.theme[props.categoryID]}, 50%, rgba(255, 255, 255, 0) 95%);
     background-size: ${props => props.isHovered ? '160% 200%' : '60% 80%'};
-    background-position: ${props => props.categoryID % 2 == 0 ? 'right' : 'left'};
+    background-position: ${props => props.categoryID % 2 == 0 ? 'left' : 'left'};
     background-repeat: no-repeat;
 
     filter: ${props => props.isHovered ? 'blur(45px)' : 'blur(15px)'};
@@ -50,7 +50,7 @@ const StyledButtonContent = styled.div`
     flex-direction: column;
     width: 100%;
     padding: 0 30px;
-    text-align: ${props => props.categoryID % 2 == 0 ? 'right' : 'left'};
+    text-align: ${props => props.categoryID % 2 == 0 ? 'left' : 'left'};
 
     h2 {
         margin: 0;
@@ -62,7 +62,7 @@ const StyledButtonContent = styled.div`
     }
 `
 
-export default function Button(props) {
+export default function CategoryNavButton(props) {
 
     const [isHovered, setIsHovered] = useState(false)
 

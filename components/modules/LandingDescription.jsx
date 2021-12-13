@@ -2,40 +2,58 @@ import styled from 'styled-components'
 import { use100vh } from 'react-div-100vh'
 import { device } from 'utils/media-breakpoints'
 import StyledParagraph from 'components/elements/StyledParagraph'
-import LandingScrollDirective from 'components/elements/LandingScrollDirective'
-
 
 const StyledContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: ${props => props.height.toString() + 'px'};
+    width: 100%;
+    height: 270px;
+    margin: 0px 0px 80px 0px;
+
+    @media ${device.mobileL} {
+        margin: 20px 0px 0px 0px;
+    }
+
+    @media ${device.tablet} {
+        margin: 20px 0px 60px 0px;
+    }
 
     @media ${device.laptop} {
-        height: 100%;
-        margin-right: 40px;
+        height: 400px;
+        margin-top: 80px;
     }
 `
 
+const StyledHeader = styled.h1`
+    font-weight: 600;
+    color: ${props => props.theme.violet};
+`
+
 const StyledLandingDescription = styled(StyledParagraph)`
-    font-size: 1.3em;
-    color: ${props => props.theme.darkGray};
-    max-width: 560px;
+    width: 100%;
+
+    @media ${device.tablet} {
+        font-size: 1.4em;
+        width: 100%;
+    }
+
+    @media ${device.laptop} {
+        font-size: 2em;
+        width: 80%;
+    }
 `
 
 export default function LandingIntroduction({ content }) {
-
-    console.log(content)
-
     const vh = use100vh()
     const safeVH = vh ? vh : 720
 
     return (
         <StyledContainer height={safeVH}>
-            <h2>{content.header}</h2>
+            <StyledHeader>{content.header}</StyledHeader>
             <StyledLandingDescription>{content.description}</StyledLandingDescription>
-            <LandingScrollDirective />
+            {/* <LandingScrollDirective /> */}
         </StyledContainer>
     )
 }
