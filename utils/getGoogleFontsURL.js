@@ -5,7 +5,7 @@
  */
 export default function GetGoogleFontsURL(fontName) {
     
-    const url = 'https://fonts.googleapis.com/css2?family=' + fontName.replace(/\s/g, '+')
+    const url = 'https://fonts.googleapis.com/css2?family=' + fontName.replace(/\s/g, '+') + ':wght@400..700'
 
     return url
 }

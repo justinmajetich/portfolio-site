@@ -1,13 +1,17 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { device } from 'utils/media-breakpoints'
 
 // My top font choices: Laila, Work Sans, Roboto, Assistant, Lato, Barlow, Source Sans Pro
 const theme = {
   1: '#66E1A6',
   2: '#DB9BF1',
   3: '#FFDF72',
-  darkGray: '#606060',
+  darkGray: '#4F4F4F',
   mediumGray: '#CDCDCD',
   lightGray: '#F0F0F0',
+  violet: '#7024FF',
+  paleLavender: '#EEE6FF',
+  gradient: 'linear-gradient(90deg, rgba(241,235,255,1) 0%, rgba(229,215,255,1) 100%)',
   headerFont: 'Work Sans'
 }
 
@@ -22,22 +26,31 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3 {
-    font-family: Helvetica Neue, sans-serif;
-    /* font-family: ${theme.headerFont}, Helvetica Neue, sans-serif; */
+    font-family: ${theme.headerFont}, Helvetica Neue, sans-serif;
     font-weight: 600;
-    /* line-height: 140%; */
   }
 
   h1 {
     margin: 0px 0px 20px 0px;
-    font-size: 3.5em;
-    line-height: 100%;
+    font-size: 2.6em;
+
+    @media ${device.tablet} {
+      font-size: 4em;
+    }
+
+    @media ${device.laptop} {
+      font-size: 5.2em;
+    }
   }
 
   h2 {
     margin: 0px 0px 10px 0px;
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 120%;
+
+    @media ${device.laptop} {
+      font-size: 2.8em;
+    }
   }
 
   h3 {
