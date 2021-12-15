@@ -36,10 +36,8 @@ export async function getStaticPaths() {
   return { paths, fallback: 'blocking' }
 }
 
-  // params contains the 'categoryID'.
-  export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
 
-  // If the route is like '/categories/code', then params.categoryID is 'code'
   const res = await fetch(apiURL + `projects?slug=${params.projectID}`)
 
   const data = await res.json()
