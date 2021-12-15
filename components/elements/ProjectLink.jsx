@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import Link from "next/link"
-import StyledParagraph from "./StyledParagraph"
 import Icon from "./Icon"
 
 const StyledContainer = styled.div`
@@ -26,11 +25,11 @@ const StyledIconWrapper = styled.div`
 
 export default function ProjectLink({ link }) {
     return (
-        <Link href={link.url}>
+        <a href={link.url} target="_blank">
             <StyledContainer>
                 <StyledIconWrapper><Icon type={link.type}/></StyledIconWrapper>
                 <StyledLinkDescription>{link.title}</StyledLinkDescription>
             </StyledContainer>
-        </Link>
+        </a>
     )
 }
