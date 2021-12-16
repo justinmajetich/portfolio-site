@@ -81,7 +81,7 @@ export default function DropdownNavigation(props) {
                         )}
                     )}
                     <StyledLinkWrapper>
-                        <a href='https://drive.google.com/file/d/1_m0JpIavhXMj7ZKoz2l2ZBloLujQCMEg/view?usp=sharing' target="_blank">
+                        <a href='https://drive.google.com/file/d/1ONG93lEUd092OAT3lVEQtDCSu4JCXoWn/view?usp=sharing' target="_blank">
                             <StyledLinkText>{'Resume'}</StyledLinkText>
                         </a>
                     </StyledLinkWrapper>
