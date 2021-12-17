@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
 
 const StyledImageWrapper = styled.div`
     width: 100%;
-    max-width: 640px;
+    max-width: 720px;
     margin: 20px 20px;
 `
 

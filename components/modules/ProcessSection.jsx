@@ -3,6 +3,7 @@ import StyledParagraph from 'components/elements/StyledParagraph'
 import { device } from 'utils/media-breakpoints'
 import Image from 'next/image'
 import ParseTextToParagraphs from 'utils/parseTextToParagraphs'
+import MediaWrapper from 'components/elements/MediaWrapper'
 
 const StyledContainer = styled.div`
     display: flex;
@@ -14,7 +15,7 @@ const StyledContainer = styled.div`
 
 const StyledImageWrapper = styled.div`
     align-self: center;
-    max-width: 640px;
+    max-width: 7200px;
     font-size: 0;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -45,12 +46,13 @@ export default function ProcessSection({ content }) {
             {ParseTextToParagraphs(content.summary, StyledParagraph)}
             {content.media ?
                 <StyledImageWrapper>
-                    <Image
+                    <MediaWrapper media={content.media}/>
+                    {/* <Image
                         src={content.media.url}
                         alt={content.media.alternativeText}
                         width={content.media.width}
                         height={content.media.height}
-                    />
+                    /> */}
                 </StyledImageWrapper>         
                 : null
             }
