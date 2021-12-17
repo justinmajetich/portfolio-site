@@ -19,6 +19,7 @@ const StyledContainer = styled.div`
 
     @media ${device.laptop} {
         margin-bottom: 80px;
+        padding-top: 0px;
     }
 `
 

@@ -10,7 +10,7 @@ const StyledWrapper = styled.div`
 
 const StyledContainer = styled.div`
     width: 100%;
-    max-width: 640px;
+    max-width: 720px;
     margin: 40px 0px 10px;
 `
 
