@@ -22,8 +22,8 @@ const StyledContainer = styled.div`
 
 const StyledImageWrapper = styled.div`
     width: 100%;
-    max-width: 720px;
-    margin: 20px 20px;
+    max-width: 640px;
+    margin: 20px 0;
 `
 
 const StyledHeaderWrapper = styled.div`
