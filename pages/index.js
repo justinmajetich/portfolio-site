@@ -3,6 +3,7 @@ import { withTheme } from 'styled-components'
 import { apiURL } from 'config/apiURL'
 import LandingLayout from 'components/layouts/LandingLayout'
 import GetGoogleFontsURL from 'utils/getGoogleFontsURL'
+import SortProjectsByDate from 'utils/sortProjectsByDate'
 
 function Home({ content, theme }) {
   return (
@@ -22,6 +23,9 @@ export async function getStaticProps() {
 
   const res = await fetch(apiURL + `landing`)
   const data = await res.json()
+
+  // Sorts projects in place descending by date.
+  SortProjectsByDate(data[0].projects)
 
   return { 
     props: {

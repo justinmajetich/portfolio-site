@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import ContentContainer from 'components/elements/ContentContainer'
 import LandingDescription from 'components/modules/LandingDescription'
-import { device } from 'utils/media-breakpoints'
 import FeaturedProject from 'components/modules/FeaturedProject'
 
 const StyledContainer = styled.div`
