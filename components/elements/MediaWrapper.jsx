@@ -8,7 +8,7 @@ const StyledMediaWrapper = styled.div`
     align-items: center;
 `
 
-const StyledReactPlayerWrapper = styled.div`
+export const StyledReactPlayerWrapper = styled.div`
     position: relative;
     padding-top: 56.25%;
     width: 100%;
