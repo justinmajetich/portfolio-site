@@ -129,6 +129,46 @@ function Deck({ content, theme}) {
 
                     <MediaRowImage>
                         <Image
+                        src={'https://res.cloudinary.com/justinmajetich/image/upload/v1671216646/child_of_saints_dark_square_9a38294ab2.jpg'}
+                        alt={'Child of Saints - Main'}
+                        width={720}
+                        height={720}
+                        />
+                    </MediaRowImage>
+                    <MediaCaption>{'\"Child of Saints\" - 3D character design and sculpt'}</MediaCaption>
+                    <Spacer noDividerLine/>
+
+                    <MediaRowWrapper>
+                        <MediaRowImage>
+                            <Image
+                                src={'https://res.cloudinary.com/justinmajetich/image/upload/v1671216646/child_of_saints_dark_clay_square_034327dcb6.jpg'}
+                                alt={'Child of Saints - Clay'}
+                                width={360}
+                                height={360}
+                            />
+                        </MediaRowImage>
+                        <MediaRowImage>
+                            <Image
+                                src={'https://res.cloudinary.com/justinmajetich/image/upload/v1671216649/child_of_saints_head_square_e5ef3fec45.jpg'}
+                                alt={'Child of Saints - Head'}
+                                width={360}
+                                height={360}
+                            />
+                        </MediaRowImage>
+                        <MediaRowImage>
+                            <Image
+                                src={'https://res.cloudinary.com/justinmajetich/image/upload/v1671216647/child_of_saints_hand_square_ef2bad3b46.jpg'}
+                                alt={'Child of Saints - Hand'}
+                                width={360}
+                                height={360}
+                            />
+                        </MediaRowImage>
+                    </MediaRowWrapper>
+                    <MediaCaption>{'\"Child of Saints\" - clay & details'}</MediaCaption>
+                    <Spacer />
+
+                    <MediaRowImage>
+                        <Image
                         src={'https://res.cloudinary.com/justinmajetich/image/upload/v1697664740/Empty_Cover_3_K_babc005073.jpg'}
                         alt={'Empty'}
                         width={720}
@@ -138,27 +178,26 @@ function Deck({ content, theme}) {
                     <MediaCaption>{'\"Empty\" - single cover art for Barrie'}</MediaCaption>
                     <Spacer />
 
-                    
-                    <MediaRowImage>
-                        <Image
-                        src={'https://res.cloudinary.com/justinmajetich/image/upload/v1697664740/Unholy_Appetite_Single_Art_3_K_fde4ab0344.jpg'}
-                        alt={'Unholy Appetite Cover'}
-                        width={720}
-                        height={720}
-                        />
-                    </MediaRowImage>
-                    <MediaCaption>{'\"Unholy Appetite\" - single cover art for Barrie'}</MediaCaption>
-                    <Spacer />
-
-                    <MediaRowImage>
-                        <Image
-                        src={'https://res.cloudinary.com/justinmajetich/image/upload/v1697664740/Nocturne_Interlude_Cover_3_K_568caa9745.jpg'}
-                        alt={'Nocturne Cover'}
-                        width={720}
-                        height={720}
-                        />
-                    </MediaRowImage>
-                    <MediaCaption>{'\"Nocturne\" - single cover art for Barrie'}</MediaCaption>
+                    <MediaRowWrapper>
+                        <MediaRowImage>
+                            <Image
+                            src={'https://res.cloudinary.com/justinmajetich/image/upload/v1697664740/Unholy_Appetite_Single_Art_3_K_fde4ab0344.jpg'}
+                            alt={'Unholy Appetite Cover'}
+                            width={420}
+                            height={420}
+                            />
+                        </MediaRowImage>
+                        {/* <MediaCaption>{'\"Unholy Appetite\" - single cover art for Barrie'}</MediaCaption> */}
+                        <MediaRowImage>
+                            <Image
+                            src={'https://res.cloudinary.com/justinmajetich/image/upload/v1697664740/Nocturne_Interlude_Cover_3_K_568caa9745.jpg'}
+                            alt={'Nocturne Cover'}
+                            width={420}
+                            height={420}
+                            />
+                        </MediaRowImage>
+                    </MediaRowWrapper>
+                    <MediaCaption>{'Companion pieces for Barrie singles \"Unholy Appetite\" & \"Nocturne\" respectively'}</MediaCaption>
                     <Spacer />
 
                     <MediaRowWrapper>
@@ -265,7 +304,7 @@ function Deck({ content, theme}) {
                             </VideoWrapperSmall>
                         </MediaRowImage>
                     </MediaRowWrapper>
-                    <MediaCaption>{'Animations for Barrie\'s 5K'}</MediaCaption>
+                    <MediaCaption>{'Animated album art for Barrie\'s 5K EP'}</MediaCaption>
                     <Spacer />
 
                     <MediaRowImage>
@@ -288,47 +327,7 @@ function Deck({ content, theme}) {
                             />
                         </VideoWrapper>
                     </MediaRowImage>
-                    <MediaCaption>{'3D character design and animation for Barrie\'s SXSW promotional media'}</MediaCaption>
-                    <Spacer />
-
-                    <MediaRowImage>
-                        <Image
-                        src={'https://res.cloudinary.com/justinmajetich/image/upload/v1671216646/child_of_saints_dark_square_9a38294ab2.jpg'}
-                        alt={'Child of Saints - Main'}
-                        width={720}
-                        height={720}
-                        />
-                    </MediaRowImage>
-                    <MediaCaption>{'\"Child of Saints\" - 3D character design and sculpt'}</MediaCaption>
-                    <Spacer noDividerLine/>
-
-                    <MediaRowWrapper>
-                        <MediaRowImage>
-                            <Image
-                                src={'https://res.cloudinary.com/justinmajetich/image/upload/v1671216646/child_of_saints_dark_clay_square_034327dcb6.jpg'}
-                                alt={'Child of Saints - Clay'}
-                                width={360}
-                                height={360}
-                            />
-                        </MediaRowImage>
-                        <MediaRowImage>
-                            <Image
-                                src={'https://res.cloudinary.com/justinmajetich/image/upload/v1671216649/child_of_saints_head_square_e5ef3fec45.jpg'}
-                                alt={'Child of Saints - Head'}
-                                width={360}
-                                height={360}
-                            />
-                        </MediaRowImage>
-                        <MediaRowImage>
-                            <Image
-                                src={'https://res.cloudinary.com/justinmajetich/image/upload/v1671216647/child_of_saints_hand_square_ef2bad3b46.jpg'}
-                                alt={'Child of Saints - Hand'}
-                                width={360}
-                                height={360}
-                            />
-                        </MediaRowImage>
-                    </MediaRowWrapper>
-                    <MediaCaption>{'\"Child of Saints\" - clay & details'}</MediaCaption>
+                    <MediaCaption>{'3D character design and animation for Barrie\'s SXSW \'22 promotional media'}</MediaCaption>
                     <Spacer />
 
                     <MediaRowImage>
@@ -339,7 +338,7 @@ function Deck({ content, theme}) {
                         height={773}
                         />
                     </MediaRowImage>
-                    <MediaCaption>{'LUV IN THE RUINS art book - text, layout & design'}</MediaCaption>
+                    <MediaCaption>{'Text, layout & design for art book accompanying Majetic\'s album LUV IN THE RUINS'}</MediaCaption>
                     <Spacer />
 
                     <MediaRowWrapper>
@@ -369,6 +368,123 @@ function Deck({ content, theme}) {
                         </MediaRowImage>
                     </MediaRowWrapper>
                     <MediaCaption>{'Layout & design for Barrie\'s physical 5K releases'}</MediaCaption>
+                    <Spacer />
+
+                    <MediaRowImage>
+                        <VideoWrapper>
+                            <ReactPlayer
+                                className='react-player'
+                                url={'https://res.cloudinary.com/justinmajetich/video/upload/v1698161339/slyder_clip_4a3a3abe5c.mp4'}
+                                width={'100%'}
+                                height={'100%'}
+                                controls
+                                playsinline
+
+                                config={{
+                                    youtube: {
+                                        playerVars: { 
+                                            modestbranding: 1,
+                                        }
+                                    }
+                                }}
+                            />
+                        </VideoWrapper>
+                    </MediaRowImage>
+                    <MediaCaption>{'Art, animation & design for 2D game - Frankie, So Long'}</MediaCaption>
+                    <Spacer noDividerLine/>
+                    
+                    <MediaRowWrapper>
+                        <MediaRowImage>
+                            <Image
+                                src={'https://res.cloudinary.com/justinmajetich/image/upload/v1698161338/player_body_sheet_1_K_2c3f3be67c.png'}
+                                alt={'Character sprite sheet'}
+                                width={360}
+                                height={360}
+                            />
+                        </MediaRowImage>
+                        <MediaRowImage>
+                            <Image
+                                src={'https://res.cloudinary.com/justinmajetich/image/upload/v1698162646/player_face_sheet_2_K_ef707b5e9c.png'}
+                                alt={'Face sprite sheet'}
+                                width={360}
+                                height={360}
+                            />
+                        </MediaRowImage>
+                        <MediaRowImage>
+                            <Image
+                                src={'https://res.cloudinary.com/justinmajetich/image/upload/v1698161342/kitchen_prop_sheet_4_K_7191ed5798.png'}
+                                alt={'Kitchen sprite sheet'}
+                                width={360}
+                                height={360}
+                            />
+                        </MediaRowImage>
+                    </MediaRowWrapper>
+                    <MediaCaption>{'A few sprite sheets from Frankie, So Long'}</MediaCaption>
+                    <Spacer />
+
+                    <MediaRowImage>
+                        <Image
+                        src={'https://res.cloudinary.com/justinmajetich/image/upload/v1698161333/fish_bowl_dba9dc9ff7.jpg'}
+                        alt={'Fishbowl'}
+                        width={720}
+                        height={720}
+                        />
+                    </MediaRowImage>
+                    <Spacer />
+
+                    <MediaRowImage>
+                        <VideoWrapper>
+                            <ReactPlayer
+                                className='react-player'
+                                url={'https://res.cloudinary.com/justinmajetich/video/upload/v1698161335/chicken_loop_f7f651232f.mp4'}
+                                width={'100%'}
+                                height={'100%'}
+                                controls
+                                playsinline
+
+                                config={{
+                                    youtube: {
+                                        playerVars: { 
+                                            modestbranding: 1,
+                                        }
+                                    }
+                                }}
+                            />
+                        </VideoWrapper>
+                    </MediaRowImage>
+                    <Spacer />
+
+                    <MediaRowImage>
+                        <Image
+                        src={'https://res.cloudinary.com/justinmajetich/image/upload/v1698163281/clay1_dc7c86b08c.png'}
+                        alt={'Hedgehog model'}
+                        width={720}
+                        height={580}
+                        />
+                    </MediaRowImage>
+                    <MediaCaption>{'WIP hedgehog - modeled, rigged & weight-painted'}</MediaCaption>
+                    <Spacer />
+
+                    <MediaRowImage>
+                        <VideoWrapper>
+                            <ReactPlayer
+                                className='react-player'
+                                url={'https://res.cloudinary.com/justinmajetich/video/upload/v1698161334/curtaindark_test_499617b9e0.mp4'}
+                                width={'100%'}
+                                height={'100%'}
+                                controls
+                                playsinline
+
+                                config={{
+                                    youtube: {
+                                        playerVars: { 
+                                            modestbranding: 1,
+                                        }
+                                    }
+                                }}
+                            />
+                        </VideoWrapper>
+                    </MediaRowImage>
                     <Spacer noDividerLine/>
 
                 </ContentContainer>
