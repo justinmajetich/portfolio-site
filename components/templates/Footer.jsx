@@ -56,7 +56,7 @@ export default function Footer() {
             <StyledSocialsWrapper>
                 <Socials />
             </StyledSocialsWrapper>
-            <StyledCopyright>{'2021 © Justin Majetich'}</StyledCopyright>
+            <StyledCopyright>{'2025 © Justin Majetich'}</StyledCopyright>
         </StyledContainer>
     )
 }
