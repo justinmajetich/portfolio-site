@@ -34,6 +34,7 @@ const StyledImageWrapper = styled.div`
     min-width: 300px;
     margin: 0px 0px 40px 0px;
     cursor: pointer;
+    overflow: hidden;
 
     @media ${device.laptop} {
         margin: 0px 80px 0px 0px;
